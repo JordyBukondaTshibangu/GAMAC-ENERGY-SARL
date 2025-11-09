@@ -23,7 +23,7 @@ function MissionCard({
       }`}
     >
       <div
-        ref={sectionRef}
+        // ref={sectionRef}
         className="w-full lg:min-w-[63%] lg:w-[700px] lg:h-[700px] flex-1"
       >
         <Image

@@ -35,7 +35,7 @@ function GMCMission({ fournirRef, valoriserRef, innoverRef }: GMCMissionProps) {
       <div className="flex flex-col gap-20  md:gap-64">
         {missions.map(({ ref, title, description, image }, index) => (
           <MissionCard
-            ref={ref!}
+            // ref={ref!}
             key={index}
             title={title}
             reverse={index % 2 === 1}
