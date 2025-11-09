@@ -7,6 +7,7 @@ import Hero from "@/components/common/gmc-hero";
 import ScrollNav from "@/components/common/gmc-scroll-into-view";
 import GMCAboutUs from "@/components/molecules/about/gmc-about-us";
 import GMCMotDuDG from "@/components/molecules/about/gmc-mot-du-dg";
+import GMCVision from "@/components/molecules/about/gmc-vision";
 
 interface SectionRef {
   current: HTMLElement | null;
@@ -20,11 +21,13 @@ interface SmoothScrollOptions {
 
 function AboutUsPage() {
   const aboutRef = useRef(null);
+  const ourVision = useRef(null);
   const motDuDgRef = useRef(null);
   const contactRef = useRef(null);
 
   const sections = [
     { label: "À propos de Nous", ref: aboutRef },
+    { label: "Notre Vision", ref: ourVision },
     { label: "Un mot du Directeur Général", ref: motDuDgRef },
     { label: "Entrez en contact", ref: contactRef },
   ];
@@ -52,6 +55,9 @@ function AboutUsPage() {
         <GMCAboutUs />
       </section>
 
+      <section ref={ourVision}>
+        <GMCVision />
+      </section>
       <section ref={motDuDgRef}>
         <GMCMotDuDG />
       </section>

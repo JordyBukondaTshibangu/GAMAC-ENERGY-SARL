@@ -19,10 +19,10 @@ function MissionPage() {
   const contactRef = useRef<HTMLElement | null>(null);
 
   const sections: SectionItem[] = [
-    { label: "Entrez en contact", ref: contactRef },
     { label: "Valoriser les talents", ref: valoriserRef },
     { label: "Innover pour un développement durable", ref: innoverRef },
     { label: "Fournir des solutions locales", ref: fournirRef },
+    { label: "Entrez en contact", ref: contactRef },
   ];
 
   const scrollToSection = (

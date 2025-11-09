@@ -12,13 +12,12 @@ const Navbar = () => {
   const navLinksLeft = [
     { label: "Accueil", href: "/" },
     { label: "À propos", href: "/about" },
-    { label: "Vision", href: "/vision" },
     { label: "Mission", href: "/mission" },
   ];
 
   const navLinksRight = [
     { label: "Services", href: "/services" },
-    { label: "Projets", href: "/projects" },
+    // { label: "Projets", href: "/projects" },
     { label: "Équipe", href: "/team" },
     { label: "Contacts", href: "/contact" },
   ];
