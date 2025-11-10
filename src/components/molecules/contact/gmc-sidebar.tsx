@@ -66,7 +66,7 @@ const GMCContactSidebar: React.FC<GMCContactSidebarProps> = ({
                   whileTap={{ scale: 0.98 }}
                   className={`w-full text-left p-4 rounded-lg border transition-all duration-300 cursor-pointer ${
                     selectedRequest.id === type.id
-                      ? "bg-[#1C5E58] text-white shadow-md"
+                      ? "bg-[#B71C1C] text-white"
                       : "bg-gray-100 hover:bg-gray-200 text-gray-800"
                   }`}
                 >
