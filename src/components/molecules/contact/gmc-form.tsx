@@ -44,7 +44,7 @@ const GMCForm: React.FC<GMCFormProps> = ({
           </button>
         </div>
 
-        <h2 className="w-fit text-2xl md:text-3xl font-bold text-gray-900 mb-8 border-b-4 border-[#1C5E58] inline-block pb-1">
+        <h2 className="w-fit text-2xl md:text-3xl font-bold text-gray-900 mb-8 border-b-4 border-[#B71C1C] inline-block pb-1">
           {selectedRequest.title.toUpperCase()}
         </h2>
       </div>
