@@ -18,7 +18,7 @@ export default function GMCGetInTouch() {
           <h3 className="font-medium  text-md md:text-xl text-amber-500">
             Entrez en Contact
           </h3>
-          <h2 className="text-xl md:text-5xl font-medium text-white leading-10">
+          <h2 className="text-xl md:text-5xl font-medium text-white leading-14">
             Vous hésitez encore sur nos fonctionnalités ?
             <span className="block text-[#B71C1C] mt-14">
               Demandez une consultation.

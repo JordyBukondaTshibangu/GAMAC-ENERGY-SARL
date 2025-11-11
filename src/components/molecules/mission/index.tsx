@@ -33,7 +33,7 @@ function GMCMission({ fournirRef, valoriserRef, innoverRef }: GMCMissionProps) {
   return (
     <section className="max-w-7xl mx-auto py:10 md:py-20 px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col gap-20  md:gap-64">
-        {missions.map(({ ref, title, description, image }, index) => (
+        {missions.map(({ title, description, image }, index) => (
           <MissionCard
             // ref={ref!}
             key={index}

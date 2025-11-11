@@ -44,7 +44,7 @@ const GMCForm: React.FC<GMCFormProps> = ({
           </button>
         </div>
 
-        <h2 className="w-fit text-2xl md:text-3xl font-bold text-gray-900 mb-8 border-b-4 border-[#1C5E58] inline-block pb-1">
+        <h2 className="w-fit text-2xl md:text-3xl font-bold text-gray-900 mb-8 border-b-4 border-[#B71C1C] inline-block pb-1">
           {selectedRequest.title.toUpperCase()}
         </h2>
       </div>
@@ -140,10 +140,10 @@ const GMCForm: React.FC<GMCFormProps> = ({
 
         <div className="md:col-span-2 flex justify-between">
           <button
-            className="w-48 bg-[#B71C1C] hover:bg-[#D32F2F] cursor-pointer text-white px-6 py-2 rounded-md font-medium transition-all  text-xl h-14 duration-300"
+            className="w-64 bg-[#B71C1C] hover:bg-[#D32F2F] cursor-pointer text-white px-6 py-2 rounded-md font-medium transition-all  text-xl h-14 duration-300"
             type="submit"
           >
-            Send
+            Envoyer ma demande
           </button>
         </div>
       </form>

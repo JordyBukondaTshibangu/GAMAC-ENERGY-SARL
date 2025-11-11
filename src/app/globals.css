@@ -17,3 +17,18 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.is-style-underlined-heading {
+  position: relative;
+  margin-bottom: 0.75em !important;
+  padding-bottom: 0.75em;
+}
+.is-style-underlined-heading::before {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  width: 2.5em;
+  height: 3px;
+  content: "";
+  background-color: lab(72.7183% 31.8672 97.9407);
+}

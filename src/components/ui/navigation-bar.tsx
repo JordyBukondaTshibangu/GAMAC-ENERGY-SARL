@@ -17,14 +17,13 @@ const Navbar = () => {
 
   const navLinksRight = [
     { label: "Services", href: "/services" },
-    // { label: "Projets", href: "/projects" },
     { label: "Équipe", href: "/team" },
     { label: "Contacts", href: "/contact" },
   ];
 
   return (
     <header className="w-full bg-[#F4F4F4] border-b border-[#E5E7EB] shadow-sm fixed top-0 z-50 transition-all duration-300">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3 md:py-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4">
         <nav className="hidden md:flex space-x-8 text-[#1B1B1B] font-medium">
           {navLinksLeft.map(({ label, href }) => (
             <Link
@@ -84,22 +83,38 @@ const Navbar = () => {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden bg-white fixed top-0 left-0 w-full min-h-screen overflow-hidden border-t border-[#E5E7EB] animate-fadeIn">
-          <nav className="flex flex-col space-y-2 px-6 py-4 text-[#1B1B1B] font-medium">
-            {[...navLinksLeft, ...navLinksRight].map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
-                className="relative uppercase py-2 text-sm group"
-              >
-                <span className="transition-colors duration-300 group-hover:text-[#B71C1C]">
-                  {link.label}
-                </span>
-                <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-[#B71C1C] transition-all duration-300 group-hover:w-full"></span>
-              </Link>
+        <div className="md:hidden fixed top-0 left-0 w-full min-h-screen bg-white z-50 animate-fadeIn flex flex-col">
+          {/* Header */}
+          <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200">
+            <div className="font-semibold text-lg text-[#1B1B1B]">
+              <span className="text-[#a02c0f]">Gamac</span> Energy
+            </div>
+            <button onClick={() => setMenuOpen(false)} className="p-2">
+              <X className="w-6 h-6 text-[#1B1B1B]" />
+            </button>
+          </div>
+
+          {/* Navigation Links */}
+          <nav className="flex flex-col px-6 py-6 space-y-2 font-medium text-[#1B1B1B]">
+            {[...navLinksLeft, ...navLinksRight].map((link, index) => (
+              <div key={link.href}>
+                {(index === 2 || index === 4) && (
+                  <hr className="border-gray-200 mb-2" />
+                )}
+                <Link
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="flex items-center justify-between py-3 text-base hover:text-[#a02c0f] transition-colors"
+                >
+                  <span>{link.label}</span>
+                  <span className="text-gray-400">{">"}</span>
+                </Link>
+              </div>
             ))}
-            <div className="mt-3 text-sm text-[#1B1B1B] hover:text-[#B71C1C] cursor-pointer transition-all">
+
+            <hr className="border-gray-200 mt-2 mb-4" />
+
+            <div className="flex justify-start items-center gap-2 text-sm text-[#1B1B1B] hover:text-[#a02c0f] cursor-pointer transition-all">
               FR | EN
             </div>
           </nav>

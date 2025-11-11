@@ -11,7 +11,7 @@ interface MissionCardProps {
 
 function MissionCard({
   image,
-  sectionRef,
+  // sectionRef,
   title,
   reverse,
   description,
