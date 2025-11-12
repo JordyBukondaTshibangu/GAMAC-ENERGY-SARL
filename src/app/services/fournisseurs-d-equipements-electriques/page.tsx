@@ -5,8 +5,8 @@ export default function GMCSPhysicalService() {
   return (
     <div className="w-full flex flex-col gap-20">
       <HeroImage
-        title="PRESTATIRES DES TRAVAUX PHYSIQUES"
-        image="/assets/images/manual-service.jpg"
+        title="FOURNISSEURS D'EQUIPEMENTSÉLECTRIQUES"
+        image="/assets/images/solar-panels.jpg"
         subtitle="Pour un futur plus vert, dès maintenant."
         description=""
         buttonText="ENTREZ EN CONTACT"
