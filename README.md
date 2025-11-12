@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ GAMAC ENERGY SARL
 
-## Getting Started
+**GAMAC ENERGY SARL** is a renewable energy company committed to powering Africa’s sustainable future through innovation, reliability, and local expertise.  
+Our official website showcases our mission, services, and projects dedicated to advancing clean energy access in the Democratic Republic of Congo and beyond.
 
-First, run the development server:
+🌍 **Website:** [https://www.gamac-energy-sarl.com](https://www.gamac-energy-sarl.com)  
+📍 **Location:** Kinshasa, Democratic Republic of Congo  
+📧 **Contact:** contact@gamac-energy.com
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 About the Project
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This web platform was built to present **GAMAC ENERGY SARL’s** vision, services, and achievements in the energy sector.  
+It highlights our expertise in:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Renewable energy production and distribution
+- Industrial and electrical infrastructure
+- Equipment supply and installation
+- Engineering and consulting services
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🧠 Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Next.js 14** (App Router)
+- **TypeScript**
+- **Tailwind CSS** for responsive design
+- **Framer Motion** for modern animations
+- **ShadCN UI** for clean, accessible UI components
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 💡 Key Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Dynamic scroll navigation
+- Responsive design (mobile-first)
+- Modular and reusable React components
+- Video and image-based hero sections
+- Smooth scrolling and section highlighting
+- Integrated contact and inquiry forms
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!  
+If you’d like to improve the website or suggest new features, please fork the repository and submit a pull request.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** — feel free to use and adapt it responsibly.
+
+---
+
+### ⚙️ **Developed by the GAMAC ENERGY SARL team**
+
+> _Powering a sustainable future._
