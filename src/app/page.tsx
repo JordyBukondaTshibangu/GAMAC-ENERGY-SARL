@@ -1,3 +1,4 @@
+import GMCGetInTouch from "@/components/common/gmc-get-in-touch";
 import Hero from "@/components/common/gmc-hero";
 import GMCOurPartners from "@/components/molecules/home/gmc-our-partners";
 import GMCOurPortfolio from "@/components/molecules/home/gmc-our-portfolio";
@@ -22,6 +23,7 @@ export default function Home() {
       <GMCOurPortfolio />
       <GMCOurPartners />
       <GMCTestimonies />
+      <GMCGetInTouch />
     </div>
   );
 }
