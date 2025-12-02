@@ -1,38 +1,41 @@
 "use client";
 
 import { Facebook, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 export default function Footer() {
+  const t = useTranslations("Footer");
+
   const contactInfo = [
     {
       icon: <Phone size={22} className="text-[#B71C1C]" />,
-      label: "Téléphone",
-      value: "(+243) 818 354 186",
+      label: t("contact.phone_label"),
+      value: t("contact.phone_number"),
     },
     {
       icon: <Mail size={22} className="text-[#B71C1C]" />,
-      label: "Email",
-      value: "contact@gamacenergy.com",
+      label: t("contact.email_label"),
+      value: t("contact.email_address"),
     },
     {
       icon: <MapPin size={22} className="text-[#B71C1C]" />,
-      label: "Adresse",
-      value: "9, Avenue du Port, Gombe, Kinshasa, RDC",
+      label: t("contact.address_label"),
+      value: t("contact.address_text"),
     },
   ];
 
   const quickLinks = [
-    { label: "À propos", href: "/about" },
-    { label: "Services", href: "/services" },
-    { label: "Projets", href: "/projects" },
-    { label: "Contacts", href: "/contact" },
+    { label: t("quick_links.about"), href: "/about" },
+    { label: t("quick_links.services"), href: "/services" },
+    { label: t("quick_links.projects"), href: "/projects" },
+    { label: t("quick_links.contacts"), href: "/contact" },
   ];
 
   const legalLinks = [
-    { label: "Politique de confidentialité", href: "/privacy-policy" },
-    { label: "Conditions d’utilisation", href: "/terms" },
-    { label: "FAQ", href: "/faq" },
+    { label: t("legalLinks.privacy"), href: "/privacy-policy" },
+    { label: t("legalLinks.terms"), href: "/terms" },
+    { label: t("legalLinks.faq"), href: "/faq" },
   ];
 
   const socialLinks = [
@@ -44,16 +47,14 @@ export default function Footer() {
   return (
     <footer className="bg-[#F4F4F4] text-[#444444] border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col gap-16">
-        {/* Top Section: Brand + Social */}
+        {/* Brand + Social */}
         <div className="flex flex-col md:flex-row justify-between gap-10 border-b border-gray-200 pb-8">
           <div className="max-w-md">
             <h2 className="text-3xl font-semibold text-[#B71C1C]">
               GAMAC ENERGY SARL
             </h2>
             <p className="mt-3 text-[#555555] leading-relaxed">
-              Nous accompagnons nos clients dans l’approvisionnement des
-              matériels et équipements spécialisés. Notre expertise garantit des
-              solutions fiables et durables.
+              {t("description")}
             </p>
           </div>
           <div className="flex gap-4">
@@ -71,10 +72,10 @@ export default function Footer() {
 
         {/* Grid Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {/* Contact Info */}
+          {/* Contact */}
           <div className="flex flex-col gap-4">
             <h3 className="text-lg font-semibold text-[#B71C1C] mb-2">
-              Contact
+              {t("contact.title")}
             </h3>
             {contactInfo.map((item, i) => (
               <div key={i} className="flex items-start gap-3">
@@ -90,7 +91,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold text-[#B71C1C] mb-2">
-              Liens rapides
+              {t("quick_links.title")}
             </h3>
             <ul className="flex flex-col gap-2">
               {quickLinks.map(({ label, href }) => (
@@ -106,10 +107,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Legal Links */}
+          {/* Legal */}
           <div>
             <h3 className="text-lg font-semibold text-[#B71C1C] mb-2">
-              Liens juridiques
+              {t("legalLinks.title")}
             </h3>
             <ul className="flex flex-col gap-2">
               {legalLinks.map(({ label, href }) => (
@@ -129,33 +130,32 @@ export default function Footer() {
         {/* Newsletter */}
         <div className="border-t border-gray-200 pt-8">
           <h3 className="text-lg font-semibold text-[#B71C1C] mb-3">
-            Newsletter
+            {t("newsletter.title")}
           </h3>
           <p className="text-sm text-[#555555] mb-4">
-            Abonnez-vous à notre newsletter pour recevoir les dernières
-            actualités et offres.
+            {t("newsletter.description")}
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <input
               type="email"
-              placeholder="Votre adresse email"
+              placeholder={t("newsletter.placeholder")}
               className="px-4 py-2 rounded-md border border-gray-300 flex-1 focus:outline-none focus:ring-2 focus:ring-[#B71C1C]"
             />
             <button className="bg-[#B71C1C] hover:bg-[#D32F2F] text-white px-6 py-2 rounded-md font-medium transition-all">
-              S’abonner
+              {t("newsletter.button")}
             </button>
           </div>
         </div>
 
-        {/* Copyright */}
+        {/* Bottom */}
         <div className="border-t border-gray-200 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-[#777777] gap-3">
-          <p>© 2025 GAMAC ENERGY SARL. Tous droits réservés.</p>
+          <p>{t("copyright")}</p>
           <div className="flex gap-4">
             <Link href="/terms" className="hover:text-[#B71C1C]">
-              Conditions
+              {t("footer_bottom_links.conditions")}
             </Link>
             <Link href="/privacy-policy" className="hover:text-[#B71C1C]">
-              Confidentialité
+              {t("footer_bottom_links.confidentiality")}
             </Link>
           </div>
         </div>

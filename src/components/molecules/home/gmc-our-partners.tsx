@@ -1,9 +1,12 @@
 "use client";
 
 import * as motion from "motion/react-client";
+
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 function GMCOurPartners() {
+  const t = useTranslations("HomePage.partenaires");
   const partners = [
     {
       image: "/assets/images/partenaires/geosigmoid-group.png",
@@ -26,7 +29,7 @@ function GMCOurPartners() {
     <section className="w-full lg:mx-auto flex flex-col gap-8 px-5 py-10 lg:py-20">
       <div className="lg:max-w-7xl w-full lg:mx-auto flex flex-col gap-20">
         <h2 className="w-full lg:w-1/3 h-full flex flex-col gap-20 text-3xl leading-12 uppercase font-bold">
-          Nos Partenaires
+          {t("title")}
         </h2>
 
         <motion.div

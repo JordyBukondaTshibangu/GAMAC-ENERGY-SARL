@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { RefObject, useRef } from "react";
 
 import GMCGetInTouch from "@/components/common/gmc-get-in-touch";
@@ -13,16 +14,18 @@ interface SectionItem {
 }
 
 function MissionPage() {
+  const t = useTranslations("Mision");
+
   const fournirRef = useRef<HTMLElement | null>(null);
   const valoriserRef = useRef<HTMLElement | null>(null);
   const innoverRef = useRef<HTMLElement | null>(null);
   const contactRef = useRef<HTMLElement | null>(null);
 
   const sections: SectionItem[] = [
-    { label: "Valoriser les talents", ref: valoriserRef },
-    { label: "Innover pour un développement durable", ref: innoverRef },
-    { label: "Fournir des solutions locales", ref: fournirRef },
-    { label: "Entrez en contact", ref: contactRef },
+    { label: t("navigation.fournir"), ref: fournirRef },
+    { label: t("navigation.valoriser"), ref: valoriserRef },
+    { label: t("navigation.innover"), ref: innoverRef },
+    { label: t("navigation.contact"), ref: contactRef },
   ];
 
   const scrollToSection = (
@@ -35,11 +38,11 @@ function MissionPage() {
   return (
     <div className="flex flex-col gap-20">
       <Hero
-        title="NOTRE MISSION"
+        title={t("hero.title")}
         videos={["assets/videos/mission.mp4"]}
-        subtitle="L’innovation au service d’une énergie propre."
-        description="Nous sommes fiers de bâtir des solutions locales qui participent à la souveraineté énergétique de notre pays."
-        buttonText="ENTREZ EN CONTACT"
+        subtitle={t("hero.title_description_1")}
+        description={t("hero.description")}
+        buttonText={t("hero.button")}
         buttonLink="/contact"
         overlayOpacity={0.7}
       />
@@ -52,7 +55,9 @@ function MissionPage() {
         valoriserRef={valoriserRef}
       />
 
-      <GMCGetInTouch />
+      <section ref={contactRef}>
+        <GMCGetInTouch />
+      </section>
     </div>
   );
 }

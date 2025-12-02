@@ -1,0 +1,804 @@
+{
+  "Navigation": {
+    "home": "Acceuil",
+    "about": "A Propos",
+    "mission": "Mission",
+    "services": "Services",
+    "equipe": "Equipe",
+    "contact": "Contact"
+  },
+  "Footer": {
+    "title": "GAMAC ENERGY SARL",
+    "description": "Nous accompagnons nos clients dans l’approvisionnement des matériels et équipements spécialisés. Notre expertise garantit des solutions fiables et durables.",
+
+    "contact": {
+      "title": "Contact",
+      "phone_label": "Téléphone",
+      "phone_number": "(+243) 818 354 186",
+      "email_label": "Email",
+      "email_address": "contact@gamacenergy.com",
+      "address_label": "Adresse",
+      "address_text": "9, Avenue du Port, Gombe, Kinshasa, RDC"
+    },
+
+    "quick_links": {
+      "title": "Liens rapides",
+      "about": "À propos",
+      "services": "Services",
+      "projects": "Projets",
+      "contacts": "Contacts"
+    },
+
+    "legalLinks": {
+      "title": "Liens juridiques",
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d’utilisation",
+      "faq": "FAQ"
+    },
+
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Abonnez-vous à notre newsletter pour recevoir les dernières actualités et offres.",
+      "button": "S’abonner",
+      "placeholder": "Votre adresse email"
+    },
+
+    "copyright": "© 2025 GAMAC ENERGY SARL. Tous droits réservés.",
+
+    "footer_bottom_links": {
+      "conditions": "Conditions",
+      "confidentiality": "Confidentialité"
+    }
+  },
+  "HomePage": {
+    "hero": {
+      "title": "GAMAC ENERGY SARL",
+      "title_description_1": "Ensemble, donnons vie à une énergie durable.",
+      "description": "Chaque projet est une opportunité d’élever notre niveau d’exigence et de prouver que l’Afrique mérite le meilleur.",
+      "button": "ENTREZ EN CONTACT"
+    },
+    "welcome_to_gamac": {
+      "title": "Bienvenue sur GAMAC Energy",
+      "subtitle": "Qui sommes-nous?",
+      "description_1": "GAMAC Energy SARL,",
+      "description_2": "est une entreprise d’ingénierie et de solutions énergétiques créée en 2023 en République Démocratique du Congo.",
+      "description_3": "Nous sommes un acteur de la transformation énergétique, spécialisé dans la conception, le développement, la construction et la modernisation d’infrastructures électriques et hydrauliques en Afrique.",
+      "description_4": "Nous opérons comme :",
+      "metrics": {
+        "metric_1": "Bureau d’études et d’ingénierie-conseil",
+        "metric_2": "Entreprise EPC (Engineering – Procurement – Construction)",
+        "metric_3": "Fournisseur d’équipements et matériels électriques spécialisés"
+      }
+    },
+    "que_fait_gamac": {
+      "title": "Ce que nous faisons",
+      "description": "Depuis notre création, nous avons fait un choix : devenir un partenaire stratégique pour construire l’avenir énergétique de l’Afrique.",
+      "description_1": "Nos équipes allient expertise locale, innovation technologique et standards internationaux pour offrir des solutions complètes, robustes et adaptées aux réalités du terrain. Chez GAMAC Energy, l’énergie n’est pas seulement un secteur",
+      "description_1_1": "c’est un levier de croissance, de résilience et de transformation socio-économique.",
+      "description_2": "Nous intervenons sur toute la chaîne de valeur énergétique :",
+      "metrics": {
+        "metric_1": "Études & ingénierie",
+        "metric_2": "Construction et maintenance",
+        "metric_3": "Modernisation et mise en conformité",
+        "metric_4": "Approvisionnement en équipements spécialisés",
+        "metric_5": "Assistance technique, supervision et contrôle"
+      },
+      "description_3": "Chaque projet que nous concevons vise à",
+      "description_3_1": "améliorer l’accès à l’énergie, renforcer les infrastructures et créer de la valeur locale durable."
+    },
+    "portfolio": {
+      "title": "Notre Portfolio",
+      "button": "En savoir plus",
+      "case_1": {
+        "title": "Bureau d’Études & Ingénierie-Conseil",
+        "description": "GAMAC Energy propose une offre complète d’ingénierie"
+      },
+      "case_2": {
+        "title": "EPC – Construction, Réhabilitation & Services Techniques",
+        "description": "Grâce à notre équipe pluridisciplinaire, nous garantissons des projets livrés clé en main, conformes aux exigences internationales."
+      },
+      "case_3": {
+        "title": "Fourniture d’Équipements Électriques",
+        "description": "GAMAC Energy dispose d’un réseau de partenaires internationaux permettant d’approvisionner des équipements spécialisés"
+      }
+    },
+    "partenaires": {
+      "title": "Nos Partenaires"
+    }
+  },
+  "GetInTouch": {
+    "title": "Entrez en Contact",
+    "subtitle": "Vous hésitez encore sur nos fonctionnalités ?",
+    "caption": "Demandez une consultation.",
+    "description": "Vous avez des questions ou souhaitez en savoir plus sur nos services ? Contactez-nous dès aujourd’hui pour discuter de vos besoins et obtenir un accompagnement personnalisé.",
+    "button": "Contactez-nous"
+  },
+  "AboutUs": {
+    "hero": {
+      "title": "A PROPOS DE NOUS",
+      "title_description_1": "L’énergie verte à portée de tous.",
+      "description": "GAMAC ENERGY est née d’une conviction : l’avenir appartient à l’énergie renouvelable. Nous innovons chaque jour pour rendre l’énergie propre accessible et performante. Notre mission : bâtir un futur durable, pour les générations d’aujourd’hui et de demain."
+    },
+    "navigation": {
+      "about": "À propos de Nous",
+      "vision": "Notre Vision",
+      "mot_du_dg": "Un mot du Directeur Général",
+      "contact": "Entrez en contac"
+    },
+    "historic": {
+      "subtitle": "Énergie pour les entreprises",
+      "title": "Produits et services pour des partenariats durables",
+      "description_1": "Fondée en mars 2023 en République Démocratique du Congo,",
+      "description_2": " GAMAC ENERGY SARL",
+      "description_3": "est bien plus qu’une société d’ingénierie : c’est un acteur de transformation énergétique. Nous opérons à la croisée des énergies renouvelables et conventionnelles, avec un objectif clair : apporter des solutions qui répondent aux défis énergétiques de l’Afrique d’aujourd’hui et bâtissent la résilience de demain. Notre savoir-faire couvre l’ensemble de la chaîne de valeur – de la conception à la construction, en passant par la maintenance et l’optimisation. Cette approche intégrée nous permet de garantir des résultats concrets, mesurables et durables."
+    },
+    "vision": {
+      "title": "Notre Vision",
+      "description_1": "est de devenir un acteur de référence et partenaire stratégique dans le secteur de l’énergie en République Démocratique du Congo et en Afrique, tout en apportant des solutions intégrées et durables qui couvrent l’ensemble de la chaîne de valeur énergétique. En tant que prestataire de travaux physiques, de services intellectuels et fournisseur de matériels et équipements spécialisés, nous aspirons à offrir une expertise de haut niveau et des technologies modernes pour renforcer les infrastructures électriques nationales. VISION 2 Contribuer activement à l’amélioration de l’accès à une énergie fiable, sûre et abordable pour tous, tout en soutenant la croissance économique et le développement durable de la RDC."
+    },
+    "mot_du_dg": {
+      "subtitle": "Mots du",
+      "title": "Directeur General"
+    }
+  },
+  "Mision": {
+    "hero": {
+      "title": "NOTRE MISSION",
+      "title_description_1": "L’innovation au service d’une énergie propre.",
+      "description": "Nous sommes fiers de bâtir des solutions locales qui participent à la souveraineté énergétique de notre pays.",
+      "button": "ENTREZ EN CONTACT"
+    },
+    "navigation": {
+      "fournir": "Fournir des solutions locales",
+      "valoriser": "Valoriser les talents",
+      "innover": "Innover pour un développement durable",
+      "contact": "Entrez en contac"
+    },
+    "missions": [
+      {
+        "title": "FOURNIR UNE ÉNERGIE FIABLE ET ACCESSIBLE",
+        "description": "Notre première mission est de garantir à nos clients, qu’ils soient industriels, institutionnels ou communautaires, une énergie fiable, continue et compétitive. Nous concevons et déployons des solutions adaptées aux besoins locaux, en combinant technologies modernes et expertise terrain. De l’étude de faisabilité à la maintenance, nous accompagnons chaque étape pour offrir une énergie qui soutient la croissance, stimule l’économie et améliore la qualité de vie des populations."
+      },
+      {
+        "title": "VALORISER LES TALENTS LOCAUX ET RENFORCER LES COMPÉTENCES",
+        "description": "Notre troisième mission est de faire de chaque projet énergétique une opportunité de développement humain. Nous nous engageons à former, employer et accompagner les talents locaux, afin de bâtir une main-d’œuvre qualifiée et fière de contribuer à la souveraineté énergétique de la République Démocratique du Congo et du continent africain."
+      },
+      {
+        "title": "INNOVER POUR UN DÉVELOPPEMENT DURABLE",
+        "description": "Notre seconde mission est d’être un acteur d’innovation responsable, en intégrant dans nos projets des solutions quifavorisent la transition énergétique et réduisent l’empreinte carbone.Nous croyons que l’avenir de l’Afrique passe par des infrastructures capables de concilier performance, sécurité etdurabilité.À travers l’électrification rurale, la valorisation des énergies renouvelables et la modernisation des installationsexistantes, nous faisons de chaque projet un levier de développement inclusif pour le continent."
+      }
+    ]
+  },
+
+  "Services": {
+    "hero": {
+      "title": "NOTRE SERVICES",
+      "title_description_1": "Pour un futur plus vert, dès maintenant.",
+      "description": "Nous accompagnons nos clients et partenaires dans la réussite de leurs projets énergétiques en électricité, hydraulique et aval pétrolier. Notre expertise couvre toutes les étapes clés : de la conception à la mise en service, avec un accompagnement technique et stratégique de bout en bout.",
+      "button": "Contactez-nous"
+    },
+
+    "navigation": {
+      "service": "Services Intellectuels",
+      "travaux": "Travaux Physiques",
+      "fournitures": "Fournitures Électriques",
+      "contact": "Entrez en contac"
+    },
+
+    "services": [
+      {
+        "title": "Prestataires des services intellectuels",
+        "description": "Nous accompagnons nos clients et partenaires dans la réussite de leurs projets énergétiques en électricité, hydraulique et aval pétrolier. Notre expertise couvre toutes les étapes clés : de la conception à la mise en service, avec un accompagnement technique et stratégique de bout en bout."
+      },
+      {
+        "title": "Prestataires des travaux physiques",
+        "description": "Nous accompagnons nos clients et partenaires dans la réussite de leurs projets énergétiques en électricité, hydraulique et aval pétrolier. Notre expertise couvre le cycle de vie de vos infrastructures énergétiques."
+      },
+      {
+        "title": "Fournisseurs d’équipements électriques",
+        "description": "Nous accompagnons nos clients dans l’approvisionnement des matériels et équipements spécialisés."
+      }
+    ],
+    "button": "Voir plus"
+  },
+
+  "ServicesIntellectuels": {
+    "hero": {
+      "title": "PRESTATIRES DES SERVICES INTELLECTUELS",
+      "subtitle": "Pour un futur plus vert, des maintenant.",
+      "description": "",
+      "button": "ENTREZ EN CONTACT"
+    },
+    "services": [
+      {
+        "title": "Études de Préfaisabilité & Faisabilité",
+        "items": [
+          "Études de préfaisabilité (screening des sites, analyses préliminaires).",
+          "Études de faisabilité technique, économique et financière.",
+          "Études de raccordement et d’intégration au réseau électrique (load flow, stabilité, court-circuit).",
+          "Études hydrologiques, géotechniques et environnementales pour projets hydrauliques.",
+          "Analyses de marché et modélisations financières pour projets aval pétrolier.",
+          "Rapports d’impact environnemental et social (EIE/ESIA)"
+        ]
+      },
+      {
+        "title": "Conception & Ingénierie",
+        "items": [
+          "Conception preliminaire, de base et détaillée des infrastructures énergétiques :",
+          "Centrales électriques (hydroélectriques, thermiques, solaires, hybrides).",
+          "Réseaux de transport et de distribution (postes, lignes HT/MT/BT).",
+          "Infrastructures hydrauliques (barrages, prises d’eau, conduites forcées, canaux).",
+          "Installations de stockage et distribution dans l’aval pétrolier (dépôts, stations-service, pipelines).",
+          "Dimensionnement des équipements electromécaniques et civils.",
+          "Élaboration de plans, schémas techniques et dossiers d’exécution."
+        ]
+      },
+      {
+        "title": "Conseil & Assistance Technique - Surveillance, Suivi & Contrôle",
+        "items": [
+          "Conseil stratégique en planification et gestion des projets énergétiques.",
+          "Accompagnement dans les procédures administratives (environnement, sécurité).",
+          "Assistance à la préparation d’appel d’offres et des soumissions.",
+          "Supervision et suivi des travaux électriques, hydromécaniques, pétroliers.",
+          "Contrôle de qualidade des matériaux, équipements et exécution sur chantier.",
+          "Vérification de conformité aux normes et standards internationaux.",
+          "Suivi HSE et Réalisation des tests, démarrage et mise en service."
+        ]
+      }
+    ]
+  },
+
+  "TravauxPhysique": {
+    "hero": {
+      "title": "PRESTATIRES DES TRAVAUX PHYSIQUES",
+      "subtitle": "Pour un futur plus vert, des maintenant.",
+      "description": "",
+      "button": "ENTREZ EN CONTACT"
+    },
+    "services": [
+      {
+        "title": "Électricité et Hydrauliques",
+        "items": [
+          {
+            "construction": [
+              "Centrales solaires/Hydro/thermiques",
+              "Des lignes HT/MT/BT",
+              "postes de transformation",
+              "réseaux de distribution et des forages d’eau potable et systèmes de pompage"
+            ],
+            "maintenance": [
+              "entretien préventif et correctif des centrales solaires/Hydro/thermiques",
+              "postes",
+              "transformateurs",
+              "lignes",
+              "equipements electriques",
+              "des forages et pompes"
+            ],
+            "Modifications & extensions": [
+              "adaptation de réseaux existants",
+              "ajout de nouvelles capacités",
+              "raccordement au réseau national (SNEL)",
+              "Remplacement ou modernisation de pompes (passage de manuel à électrique/solaire)",
+              "Extension du réseau de distribution à partir d’un forage existant",
+              "Ajout de systèmes de stockage supplémentaires (cuves, réservoirs)"
+            ],
+            "mise aux normes": [
+              "mise en conformité aux standards internationaux (CEI, IEEE)",
+              "exigences locales (ARE, MRHE)",
+              "mise en conformité avec les standards nationaux et internationaux (OMS, ISO, normes sanitaires)",
+              "installation de dispositifs de contrôle de la qualité de l’eau"
+            ],
+            "rénovation": [
+              "réhabilitation de centrales",
+              "postes et réseaux vétustes",
+              "réhabilitation de forages vétustes ou abandonnés",
+              "remise en état des systèmes de pompage et de distribution"
+            ],
+            "dépose": [
+              "démontage safegardé de vieilles lignes",
+              "postes",
+              "pompage hors service ou équipements non fonctionnels",
+              "assainissement et réhabilitation des sites"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Pétrole & Gaz",
+        "items": [
+          "Construction et maintenance de dépôts pétroliers conformes aux normes internationales.",
+          "Déploiement et gestion de pipelines avec systèmes de surveillance avancés.",
+          "Integration de solutions d’automatisation pour la sécurité et l’efficacité.",
+          "Développement de raffineries micro-modulaires innovantes, flexibles et rentables."
+        ]
+      }
+    ]
+  },
+  "Fournisseurs": {
+    "hero": {
+      "title": "FOURNISSEURS D'EQUIPEMENTS ÉLECTRIQUES",
+      "subtitle": "Pour un futur plus vert, des maintenant.",
+      "description": "",
+      "button": "ENTREZ EN CONTACT"
+    },
+    "Section": {
+      "title": "Approvisionnement en Équipements Spécialisés",
+      "description": "GAMAC Energy dispose d’un réseau de partenaires internationaux permettant d’approvisionner des équipements spécialisés conformes aux normes internationales et adaptés aux conditions africaines.",
+      "items": [
+        "Panneaux et batteries solaires",
+        "Transformateurs HT/MT/BT",
+        "Postes électriques préfabriqués",
+        "Câbles, accessoires et équipements de protection",
+        "Onduleurs, alternateurs, régulateurs",
+        "Appareillage électrique (disjoncteurs, sectionneurs, cellules)",
+        "Turbines hydroélectriques",
+        "Systèmes de pompage et équipements hydrauliques"
+      ]
+    }
+  },
+
+  "Team": {
+    "hero": {
+      "title": "NOTRE EQUIPE",
+      "title_description_1": "Réinventons l’énergie, préservons la planète.",
+      "description": "Notre équipe réunit des passionnés engagés pour un avenir durable. Ensemble, nous concevons des solutions d’énergie propre, innovantes et accessibles à tous. Guidés par la même vision, nous transformons l’énergie d’aujourd’hui pour préserver celle de demain.",
+      "button": "Voire plus a propos de nous"
+    },
+    "team": {
+      "subtitle": "Ensemble, faisons briller un futur vert.",
+      "title": "NOTRE EQUIPE",
+      "description_1": "Notre equipe",
+      "description_2": " GAMAC ENERGY SARL",
+      "description_3": "est composée de professionnels expérimentés issus de divers horizons, unis par des valeurs communes, une vision partagée et la volonté de bâtir un avenir meilleur pour notre pays et tous ceux qui y vivent. Animés par une quête constante d’excellence, nous plaçons l’agilité et les résultats au cœur de nos actions. Guidés par un esprit entrepreneurial, nous agissons avec intégrité et rigueur afin de garantir une gouvernance exemplaire dans chacun de nos rôles. Si vous souhaitez rejoindre notre aventure, contactez-nous à l’adresse suivante : 📧 info@gamac-energy.com pour obtenir plus d’informations sur notre processus de recrutement."
+    },
+    "members": [
+      {
+        "name: ": "Tony DINO CHERMANI",
+        "role": "DIRECTEUR GENERAL",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem molestias perferendis quis odit totam reiciendis veniam culpa placeat nemo in dicta modi nesciunt nam et, dolor, tenetur architecto vel tempore."
+      },
+      {
+        "name: ": "Renelle TSHIBANGU",
+        "role": "COORDINATRICE",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem molestias perferendis quis odit totam reiciendis veniam culpa placeat nemo in dicta modi nesciunt nam et, dolor, tenetur architecto vel tempore."
+      },
+      {
+        "name: ": "Rhamia CHAKOPO",
+        "role": "COORDINATEUR TECHNIQUE",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem molestias perferendis quis odit totam reiciendis veniam culpa placeat nemo in dicta modi nesciunt nam et, dolor, tenetur architecto vel tempore."
+      },
+      {
+        "name: ": "Theoda TSHIBANGU",
+        "role": "Ingénieur Projet",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem molestias perferendis quis odit totam reiciendis veniam culpa placeat nemo in dicta modi nesciunt nam et, dolor, tenetur architecto vel tempore."
+      },
+      {
+        "name: ": "JOHN MFUTA",
+        "role": "Business Intelligence & Business developper",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem molestias perferendis quis odit totam reiciendis veniam culpa placeat nemo in dicta modi nesciunt nam et, dolor, tenetur architecto vel tempore."
+      },
+      {
+        "name": "Aline Makambo",
+        "role": "Responsable Administrative et IT Manager",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem molestias perferendis quis odit totam reiciendis veniam culpa placeat nemo in dicta modi nesciunt nam et, dolor, tenetur architecto vel tempore."
+      }
+    ]
+  },
+
+  "Contact": {
+    "hero": {
+      "subtitle": "ENSEMBLE, FAISONS BRILLER UN FUTUR VERT.",
+      "title": "CONTACTEZ-NOUS",
+      "description": "Une question, un projet ou une idée à partager ? Notre équipe est à votre écoute pour vous accompagner dans vos démarches énergétiques. Ensemble, donnons vie à des solutions durables et responsables."
+    },
+
+    "form_section": {
+      "subtitle": "ENVOYEZ-NOUS UN MESSAGE",
+      "title": "Entrez en Contact avec Nous",
+      "button_select_request": "Selectionnez votre demande"
+    },
+
+    "bottom_form": {
+      "title": "NOS ACTIVITÉS",
+
+      "placeholders": {
+        "first_name": "Entrez votre nom",
+        "last_name": "Entrez votre prénom",
+        "email": "Entrez votre adresse email",
+        "phone": "Entrez votre numéro de tелефone",
+        "message": "Entrez votre message"
+      },
+
+      "labels": {
+        "first_name": "Votre Nom *",
+        "last_name": "Votre Prénom *",
+        "email": "Votre E-mail *",
+        "phone": "Votre Telephone",
+        "message": "Message *"
+      },
+
+      "privacy_text": "Your data will be processed according to our privacy policy.",
+      "button_submit": "Envoyer ma demande"
+    },
+
+    "request_types": {
+      "title": "Sélectionnez le type de demande",
+      "description": "Choisissez l’option qui correspond le mieux à votre situation.",
+
+      "items": {
+        "activites": {
+          "title": "Nos activités",
+          "description": "Nos solutions peuvent vous aider à atteindre vos objectifs."
+        },
+        "achats": {
+          "title": "Achats et approvisionnements",
+          "description": "Devenez fournisseur et contribuez à notre chaîne d’approvisionnement durable."
+        },
+        "innovation": {
+          "title": "Innovation",
+          "description": "Proposez des idées innovantes et durables pour renforcer nos projets."
+        },
+        "presse": {
+          "title": "Presse et collaborations éditoriales",
+          "description": "Proposez des collaborations, des interviews ou des articles éditoriaux."
+        },
+        "autres": {
+          "title": "Autres demandes",
+          "description": "Pour toute demande générale ou non spécifiée."
+        }
+      }
+    }
+  },
+
+  "Faq": {
+    "title": "FAQ",
+    "subtitle": "Bienvenue sur notre page Foire Aux Questions (FAQ).Vous trouverez ici les réponses aux interrogations les plus fréquentes concernant Bigemip, nos services et nos solutions.",
+    "description": "Notre objectif est de vous accompagner et de vous fournir des informations claires et rapides sur :",
+    "list": {
+      "option_1": "Nos offres et prestations",
+      "option_2": "Les démarches et processus d’inscription ou de souscription",
+      "option_3": "Le support technique et l’assistance client",
+      "option_4": "Les modalités de paiement et de facturation",
+      "option_5": "Toute autre question pratique liée à nos activités"
+    },
+    "detail": "Si vous ne trouvez pas la réponse à votre question, n’hésitez pas à nous contacter directement via notre formulaire de contact ou par email. Notre équipe sera ravie de vous aider."
+  },
+  "PrivacyPolicy": {
+    "title": "Privacy Policy",
+    "subtitle": "Chez Bigemip, nous accordons une importance primordiale à la protection de vos données personnelles et à votre vie privée. Cette Politique de Confidentialité a pour objectif de vous expliquer de manière claire et transparente",
+    "description_1": "Bienvenue sur notre page Politique de Confidentialité. Chez Bigemip, la protection de vos données personnelles est une priorité.",
+    "list_1": {
+      "option_1": " Les types de données que nous collectons",
+      "option_2": " L’utilisation que nous faisons de vos informations",
+      "option_3": "La durée de conservation de vos données",
+      "option_4": "Les mesures de sécurité mises en place pour les protéger",
+      "option_5": "Vos droits en matière d’accès, de rectification et de suppression de vos données"
+    },
+    "description_2": "Nous nous engageons à traiter vos informations avec la plus grande confidentialité et conformément aux réglementations en vigueur (comme le RGPD). Si vous avez la moindre question ou souhaitez exercer vos droits, vous pouvez nous contacter directement via notre formulaire de contact ou par email.",
+    "main": {
+      "title": "Politique de Confidentialité – Bigemip",
+      "description": "Chez Bigemip, nous accordons une importance primordiale à la protection de vos données personnelles et à votre vie privée. Cette Politique de Confidentialité a pour objectif de vous expliquer de manière claire et transparente :",
+      "list": {
+        "item_1": "Quelles données nous collectons",
+        "item_2": "Comment et pourquoi nous les utilisons",
+        "item_3": "Les mesures mises en place pour les protéger",
+        "item_4": "Les droits dont vous disposez concernant vos informations"
+      },
+      "detail": "En utilisant nos services, vous acceptez les termes décrits ci-dessous.",
+      "content": {
+        "content_1": {
+          "title": "1. Données que nous collectons",
+          "description": "Nous collectons uniquement les données nécessaires à la fourniture et à l’amélioration de nos services :",
+          "list": {
+            "item_1": "Informations personnelles : nom, prénom, adresse email, numéro de téléphone, fonction, entreprise.",
+            "item_2": "Informations techniques : adresse IP, type de navigateur,système d’exploitation, pages consultées, temps de visite.",
+            "item_3": "Données de communication : échanges par email, formulaires remplis, messages envoyés via nos plateformes.",
+            "item_4": "Données contractuelles : informations liées à la facturation, moyens de paiement, historiques de commandes ou de prestations."
+          },
+          "detail": "En utilisant nos services, vous acceptez les termes décrits ci-dessous."
+        },
+        "content_2": {
+          "title": "2. Finalités de l’utilisation des données",
+          "description": "Vos données sont collectées et utilisées uniquement pour les objectifs suivants :",
+          "list": {
+            "item_1": "Fournir et améliorer nos services et solutions",
+            "item_2": "Gérer vos demandes, inscriptions et projets",
+            "item_3": "Personnaliser votre expérience utilisateur",
+            "item_4": "Communiquer avec vous (informations, offres, newsletters, événements)",
+            "item_5": "Assurer le suivi administratif, légal et financier",
+            "item_6": "Prévenir et détecter les fraudes ou activités malveillantes"
+          }
+        },
+        "content_3": {
+          "title": "3. Partage de vos données",
+          "description": "Nous ne vendons ni ne louons vos données à des tiers. Cependant, vos informations peuvent être partagées uniquement dans les cas suivants:",
+          "list": {
+            "item_1": "Partenaires de confiance : lorsque cela est nécessaire pour fournir le service (ex. prestataires techniques, hébergeurs).",
+            "item_2": "Obligations légales : en cas d’exigence des autorités judiciaires ou réglementaires.",
+            "item_3": "Transferts sécurisés : dans le cadre d’outils tiers (par exemple Google Workspace, LinkedIn ou autres logiciels utilisés pour nos activités), uniquement si ces services garantissent un niveau adéquat de protection des données."
+          }
+        },
+        "content_4": {
+          "title": "4. Sécurité et protection",
+          "description": "Nous mettons en place des mesures techniques et organisationnelles pour protéger vos données contre :",
+          "list": {
+            "item_1": "Les accès non autorisés",
+            "item_2": "Les pertes, fuites ou vols",
+            "item_3": "Les altérations ou destructions accidentelles",
+            "item_4": "Hébergement sécurisé",
+            "item_5": "Connexions chiffrées (SSL/HTTPS)",
+            "item_6": "Gestion restreinte des accès en interne",
+            "item_7": "Sauvegardes régulières"
+          }
+        },
+        "content_5": {
+          "title": "5. Conservation des données",
+          "description": "Vos données sont conservées uniquement le temps nécessaire à la réalisation des finalités décrites ci-dessus, puis supprimées ou anonymisées. Certaines informations peuvent être conservées plus longtemps afin de respecter nos obligations légales et fiscales."
+        },
+        "content_6": {
+          "title": "6. Vos droits",
+          "description": "Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :",
+          "list": {
+            "item_1": "Accès : savoir quelles données nous détenons sur vous",
+            "item_2": "Rectification : corriger vos informations si elles sont inexactes ou incomplètes",
+            "item_3": "Suppression : demander l’effacement de vos données personnelles",
+            "item_4": "Opposition : refuser l’utilisation de vos données à certaines fins (marketing, prospection)",
+            "item_5": "Portabilité : obtenir une copie de vos données dans un format lisible",
+            "item_6": "Limitation : restreindre le traitement de vos données dans certains cas"
+          }
+        },
+        "content_7": {
+          "title": "7. Cookies et technologies similaires",
+          "description": "Notre site peut utiliser des cookies et outils de suivi afin de :",
+          "list": {
+            "item_1": "Faciliter votre navigation",
+            "item_2": "Mesurer l’audience et améliorer l’expérience utilisateur",
+            "item_3": "Personnaliser le contenu et les offres"
+          },
+          "detail": "Vous pouvez configurer votre navigateur pour refuser les cookies ou être informé lors de leur utilisation."
+        },
+        "content_8": {
+          "title": "8. Modifications de cette politique",
+          "description": "Nous pouvons mettre à jour cette Politique de Confidentialité afin de refléter l’évolution de nos pratiques, de nos services ou de la législation. La version la plus récente sera toujours disponible sur cette page."
+        }
+      }
+    }
+  },
+  "Support": {
+    "title": "Support Chez BIGEMIP",
+    "subtitle": "Bienvenue sur la page Support de Bigemip. Notre équipe est à votre disposition pour vous aider à résoudre vos problèmes, répondre à vos questions et vous accompagner dans l’utilisation de nos services.",
+    "content": {
+      "content_1": {
+        "title": "🔎 Trouvez rapidement une réponse",
+        "description": "Avant de contacter notre équipe, nous vous invitons à consulter :",
+        "list": {
+          "item_1": "La FAQ (Foire aux Questions) : vous y trouverez les réponses aux questions les plus fréquentes.",
+          "item_2": "La Politique de Confidentialité : pour comprendre comment nous traitons vos données.",
+          "item_3": "Les Termes et Conditions : pour connaître vos droits et obligations."
+        }
+      },
+      "content_2": {
+        "title": "📩 Contacter le support",
+        "description": "Si vous ne trouvez pas la solution à votre problème, notre équipe reste disponible :",
+        "list": {
+          "item_1": "📧 Email support : support@bigemip.com",
+          "item_2": "📞 Téléphone : (+021) 645 863 232",
+          "item_3": "📍 Adresse : 9, Avenue du Port, GOMBE, KINSHASA, RDC."
+        }
+      },
+      "content_3": {
+        "title": "⏰ Nos horaires d’assistance :",
+        "list": {
+          "item_1": "📅 Lundi au Vendredi de 9h00 à 18h00",
+          "item_2": "📅 Samedi de 9h00 à 14h00",
+          "item_3": "Dimanche & jours fériés : Fermé"
+        }
+      },
+      "content_4": {
+        "title": "🛠️ Types de demandes que nous traitons",
+        "description": "Notre équipe support peut vous accompagner pour :",
+        "list": {
+          "item_1": "Problèmes techniques liés à l’utilisation de nos plateformes et services",
+          "item_2": "Assistance à la configuration ou à l’installation",
+          "item_3": "Questions sur la facturation et les paiements",
+          "item_4": "Demandes d’informations sur nos offres et solutions",
+          "item_5": "Signalement d’un bug, d’un incident ou d’une erreur"
+        }
+      },
+      "content_5": {
+        "title": "📝 Comment nous traitons vos demandes",
+        "list": {
+          "item_1": "Chaque demande est enregistrée et reçoit un numéro de ticket.",
+          "item_2": "Vous pouvez suivre l’évolution de votre demande via email ou téléphone.",
+          "item_3": "Notre objectif : vous fournir une réponse sous 24 à 48h ouvrées."
+        }
+      },
+      "content_6": {
+        "title": "🤝 Engagement qualité",
+        "description": "Chez Bigemip, nous nous engageons à :",
+        "list": {
+          "item_1": "Vous offrir une assistance claire et personnalisée",
+          "item_2": "Vous répondre dans les meilleurs délais",
+          "item_3": "Améliorer nos services grâce à vos retours"
+        }
+      }
+    }
+  },
+  "TermsAndCondition": {
+    "title": "Termes et Conditions",
+    "subtitle": "Les présentes Conditions Générales d’Utilisation et de Vente (ci-après les « Conditions ») définissent les droits et obligations applicables à toute utilisation des services et produits proposés par Bigemip. En accédant à notre site internet, à nos plateformes ou en utilisant nos services, vous acceptez sans réserve ces Conditions.",
+    "content": {
+      "content_1": {
+        "title": "1. Objet",
+        "description": "Les présentes Conditions ont pour objet de régir :",
+        "list": {
+          "item_1": "L’accès et l’utilisation de notre site et de nos services",
+          "item_2": "Les modalités de souscription, d’achat et d’utilisation des prestations fournies par Bigemip",
+          "item_3": "Les droits et obligations réciproques entre BIGEMIPet ses utilisateurs/clients"
+        }
+      },
+      "content_2": {
+        "title": "2. Acceptation des Conditions",
+        "description": "Toute utilisation de nos services implique l’acceptation pleine et entière des présentes Conditions. Si vous n’acceptez pas ces Conditions, vous ne pouvez pas utiliser nos services."
+      },
+      "content_3": {
+        "title": "3. Services proposés",
+        "description": "BIGEMIPmet à disposition des utilisateurs :",
+        "list": {
+          "item_1": "Des prestations de conseil, d’analyse et d’accompagnement",
+          "item_2": "Des solutions numériques et technologiques",
+          "item_3": "Des services de formation, de communication et de support",
+          "item_4": "D’autres services complémentaires précisés sur notre site ou lors de la signature d’un contrat"
+        }
+      },
+      "content_4": {
+        "title": "4. Accès aux services",
+        "description": "L’accès à nos services peut nécessiter :",
+        "list": {
+          "item_1": "Une inscription préalable ou la création d’un compte utilisateur",
+          "item_2": "La fourniture d’informations exactes et à jour",
+          "item_3": "Le respect des obligations techniques (connexion internet, logiciels requis, etc.)"
+        }
+      },
+      "content_5": {
+        "title": "5. Commandes et contrats",
+        "description": "Toute commande ou souscription à nos services :",
+        "list": {
+          "item_1": "Doit être validée par écrit (email, devis signé ou contrat)",
+          "item_2": "N’est considérée comme définitive qu’après confirmation par Bigemip",
+          "item_3": "Implique l’acceptation sans réserve des présentes Conditions"
+        }
+      },
+      "content_6": {
+        "title": "6. Tarifs et paiement",
+        "list": {
+          "item_1": "Les prix de nos services sont indiqués en [devise à préciser, ex. FCFA / EUR / USD], hors taxes et frais supplémentaires éventuels.",
+          "item_2": "Les paiements doivent être effectués selon les modalités convenues (virement bancaire, carte, espèces, etc.).",
+          "item_3": "En cas de retard de paiement, BIGEMIPse réserve le droit de suspendre l’accès aux services."
+        }
+      },
+      "content_7": {
+        "title": "7. Responsabilités de l’utilisateur",
+        "description": "L’utilisateur s’engage à :",
+        "list": {
+          "item_1": "Fournir des informations exactes et actualisées",
+          "item_2": "Utiliser les services de manière conforme aux lois et règlements en vigueur",
+          "item_3": "Ne pas porter atteinte à la sécurité, à l’intégrité ou au bon fonctionnement des plateformes de Bigemip"
+        }
+      },
+      "content_8": {
+        "title": "8. Responsabilités de Bigemip",
+        "description": "BIGEMIPs’engage à :",
+        "list": {
+          "item_1": "Fournir les services avec diligence et professionnalisme",
+          "item_2": "Mettre en place des moyens techniques raisonnables pour assurer la sécurité des données et des accès",
+          "item_3": "Respecter les obligations légales et contractuelles liées à ses prestations"
+        }
+      },
+      "content_9": {
+        "title": "9. Propriété intellectuelle",
+        "list": {
+          "item_1": "Tous les contenus (textes, images, logos, logiciels, documents, etc.) diffusés par BIGEMIPsont protégés par les lois relatives à la propriété intellectuelle.",
+          "item_2": "Toute reproduction, diffusion ou exploitation sans autorisation écrite est strictement interdite."
+        }
+      },
+      "content_10": {
+        "title": "10. Données personnelles",
+        "description": "Le traitement des données personnelles est régi par notre Politique de Confidentialité, consultable sur notre site."
+      },
+      "content_11": {
+        "title": "11. Résiliation",
+        "list": {
+          "item_1": "Chaque partie peut résilier le contrat en cas de manquement grave par l’autre partie, après mise en demeure restée sans effet.",
+          "item_2": "BIGEMIPpeut suspendre ou supprimer un compte utilisateur en cas d’usage frauduleux, abusif ou non conforme aux présentes Conditions."
+        }
+      },
+      "content_12": {
+        "title": "12. Limitation de responsabilité",
+        "list": {
+          "item_1": "BIGEMIPne pourra être tenu responsable des dommages indirects, pertes de données, pertes financières ou préjudices immatériels subis par l’utilisateur.",
+          "item_2": "La responsabilité de Bigemip, si elle venait à être engagée, sera limitée au montant payé par le client pour le service concerné."
+        }
+      },
+      "content_13": {
+        "title": "13. Force majeure",
+        "description": "BIGEMIPne saurait être tenu responsable en cas d’événement de force majeure (catastrophe naturelle, panne généralisée, conflit social, guerre, décision administrative, etc.) rendant impossible l’exécution des services."
+      },
+      "content_14": {
+        "title": "14. Modification des Conditions",
+        "description": "BIGEMIPse réserve le droit de modifier les présentes Conditions à tout moment. La version applicable est celle publiée sur notre site au moment de l’utilisation des services."
+      }
+    }
+  },
+  "More": {
+    "consulting": {
+      "title": "CONSULTING",
+      "description": "Acquisition des données géologiques et géophysiques, accompagnement dans toutes les phases de vos projets industriels, de recherche géologique, minière..."
+    },
+    "database": {
+      "title": "BANQUE DES DONNÉES",
+      "points": [
+        "Évaluation technique et opérationnelle des actifs (capacités, état, mise en service, localisation GPS, photos horodatées).",
+        "Production de rapports analytiques et cartographie numérique interactive pour la planification et la maintenance.",
+        "Formation professionnelle à l’utilisation des logiciels spécialisés (ArcGIS, QGIS, WebGIS sur mesure, bases de données spatiales)."
+      ]
+    },
+    "mapping": {
+      "title": "CARTOGRAPHIE ET SOLUTIONS LOGICIELLES",
+      "points": [
+        "Développement et déploiement d’outils SIG (Systèmes d’Information Géographique) pour la cartographie interactive du réseau.",
+        "Intégration de plateformes de monitoring en temps réel (WebGIS, IoT, capteurs intelligents) pour le suivi des équipements.",
+        "Tableaux de bord décisionnels et rapports automatisés pour les directions techniques et commerciales.",
+        "Hébergement sécurisé des données."
+      ]
+    },
+    "mission": {
+      "title": "NOTRE MISSION",
+      "intro": "Chez Bigemip Sarl, nous avons pour mission d'accompagner nos clients dans la réalisation de projets innovants et à forte valeur ajoutée.",
+      "values": {
+        "innovation": {
+          "title": "INNOVATION",
+          "text": "Toujours à l’affût des nouvelles technologies pour vous offrir des solutions modernes et efficaces dans le métier des investigations géologiques et minières."
+        },
+        "flexibility": {
+          "title": "FLEXIBILITÉ",
+          "text": "Chaque projet mérite une attention minutieuse et un engagement total pour garantir un résultat à la hauteur de vos attentes."
+        },
+        "commitment": {
+          "title": "ENGAGEMENT POUR L’AFRIQUE",
+          "text": "En tant qu’entreprise africaine, BIGEMIP s’engage à accompagner la croissance du continent par des solutions innovantes et durables. Notre mission est de contribuer à l’émergence d’une économie forte et compétitive au bénéfice des populations africaines."
+        }
+      }
+    },
+    "expertise": {
+      "title": "NOTRE EXPERTISE",
+      "baseMap": {
+        "title": "CARTE GÉOLOGIQUE DE BASE",
+        "description": "Forte de son expérience en géologie appliquée et en géo-informatique, BIGEMIP SARL accompagne les opérateurs du secteur minier dans la production et l’actualisation de cartes géologiques fiables, précises et conformes aux standards internationaux.",
+        "points": [
+          "Cartes géologiques régionales et locales, illustrant les formations lithologiques et les unités stratigraphiques.",
+          "Cartes structurales, mettant en évidence les grands traits tectoniques, plis et failles.",
+          "Cartes métallogéniques, présentant la répartition des substances minérales connues et des zones à potentiel."
+        ]
+      },
+      "geoScientific": {
+        "title": "CARTES GÉOSCIENTIFIQUES THÉMATIQUES",
+        "points": [
+          "Cartes d’inventaire des indices et gisements miniers.",
+          "Cartes des zones d’exploration prioritaire.",
+          "Cartes des infrastructures minières et énergétiques, facilitant la planification sectorielle."
+        ]
+      },
+      "mining": {
+        "title": "CARTES MINIÈRES ET D’INVENTAIRE DES RESSOURCES",
+        "points": [
+          "Des cartes hydrogéologiques, identifiant les nappes souterraines et les zones de recharge.",
+          "Des cartes géotechniques, décrivant la nature et la stabilité des terrains pour les ouvrages d’infrastructures.",
+          "Des cartes géophysiques (magnétiques, gravimétriques, radiométriques) pour l’interprétation des structures profondes.",
+          "Des cartes géochimiques régionales, mettant en évidence les anomalies d’éléments traces.",
+          "Des cartes pédologiques et morpho-structurales, reliant géologie, relief et occupation du sol."
+        ]
+      }
+    }
+  }
+}

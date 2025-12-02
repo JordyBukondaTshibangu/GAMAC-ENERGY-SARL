@@ -1,4 +1,7 @@
+"use client";
+
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 type RequestType = {
   id: number;
@@ -21,6 +24,8 @@ const GMCContactSidebar: React.FC<GMCContactSidebarProps> = ({
   onOverlayClick,
   isOpen = true,
 }) => {
+  const t = useTranslations("Contact.request_types");
+
   function handleRequestClick(request: RequestType) {
     setSelectedRequest(request);
     onOverlayClick?.();
@@ -51,11 +56,9 @@ const GMCContactSidebar: React.FC<GMCContactSidebarProps> = ({
             className="w-full h-full md:w-1/4 bg-[#F4F4F4] border-l border-gray-200 p-8 overflow-y-auto shadow-2xl"
           >
             <h2 className="text-2xl font-bold text-gray-800 mb-6">
-              Sélectionnez le type de demande
+              {t("title")}
             </h2>
-            <p className="text-sm text-gray-600 mb-6">
-              Choisissez l’option qui correspond le mieux à votre situation.
-            </p>
+            <p className="text-sm text-gray-600 mb-6">{t("description")}</p>
 
             <div className="flex flex-col gap-4">
               {requestTypes.map((type) => (

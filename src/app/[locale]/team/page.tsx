@@ -1,20 +1,27 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 import GMCGetInTouch from "@/components/common/gmc-get-in-touch";
 import Hero from "@/components/common/gmc-hero";
 import GMCTeamDescription from "@/components/molecules/team/gmc-team-description";
 import GMCTeamList from "@/components/molecules/team/gmc-team-list";
 
 function TeamPage() {
+  const t = useTranslations("Team");
+
   return (
     <div className="flex flex-col gap-20">
       <Hero
-        title="NOTRE EQUIPE"
+        title={t("hero.title")}
         videos={["assets/videos/team.mp4"]}
-        subtitle="Réinventons l’énergie, préservons la planète."
-        description="Notre équipe réunit des passionnés engagés pour un avenir durable. Ensemble, nous concevons des solutions d’énergie propre, innovantes et accessibles à tous. Guidés par la même vision, nous transformons l’énergie d’aujourd’hui pour préserver celle de demain."
-        buttonText="VOIR PLUS A PROPOS DE NOUS"
+        subtitle={t("hero.title_description_1")}
+        description={t("hero.description")}
+        buttonText={t("hero.button")}
         buttonLink="/about"
         overlayOpacity={0.7}
       />
+
       <GMCTeamDescription />
       <GMCTeamList />
       <GMCGetInTouch />

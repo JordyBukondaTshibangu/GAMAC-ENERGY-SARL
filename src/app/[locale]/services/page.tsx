@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useRef } from "react";
 
 import GMCGetInTouch from "@/components/common/gmc-get-in-touch";
@@ -18,16 +19,18 @@ interface SmoothScrollOptions {
 }
 
 export default function GMCServicesPage() {
+  const t = useTranslations("Services");
+
   const intellectuelsRef = useRef<HTMLElement | null>(null);
   const physiquesRef = useRef<HTMLElement | null>(null);
   const equipementsRef = useRef<HTMLElement | null>(null);
   const contactRef = useRef<HTMLElement | null>(null);
 
   const sections = [
-    { label: "Services Intellectuels", ref: intellectuelsRef },
-    { label: "Travaux Physiques", ref: physiquesRef },
-    { label: "Fournitures Électriques", ref: equipementsRef },
-    { label: "Contact", ref: contactRef },
+    { label: t("navigation.service"), ref: intellectuelsRef },
+    { label: t("navigation.travaux"), ref: physiquesRef },
+    { label: t("navigation.fournitures"), ref: equipementsRef },
+    { label: t("navigation.contact"), ref: contactRef },
   ];
 
   const scrollToSection = (
@@ -39,24 +42,21 @@ export default function GMCServicesPage() {
 
   const prestations = [
     {
-      title: "Prestataires des services intellectuels",
+      title: t("services.0.title"),
       link: "prestataires-des-services-intellectuels",
-      description:
-        "Nous accompagnons nos clients et partenaires dans la réussite de leurs projets énergétiques en électricité, hydraulique et aval pétrolier. Notre expertise couvre toutes les étapes clés : de la conception à la mise en service, avec un accompagnement technique et stratégique de bout en bout.",
+      description: t("services.0.description"),
       image: "/assets/images/mission-2.jpg",
     },
     {
-      title: "Prestataires des travaux physiques",
+      title: t("services.1.title"),
       link: "prestataires-des-travaux-physiques",
-      description:
-        "Nous accompagnons nos clients et partenaires dans la réussite de leurs projets énergétiques en électricité, hydraulique et aval pétrolier. Notre expertise couvre le cycle de vie de vos infrastructures énergétiques.",
+      description: t("services.1.description"),
       image: "/assets/images/manual-service.jpg",
     },
     {
-      title: "Fournisseurs d’équipements électriques",
+      title: t("services.2.title"),
       link: "fournisseurs-d-equipements-electriques",
-      description:
-        "Nous accompagnons nos clients dans l’approvisionnement des matériels et équipements spécialisés.",
+      description: t("services.2.description"),
       image: "/assets/images/solar-equipment.jpg",
     },
   ];
@@ -64,11 +64,11 @@ export default function GMCServicesPage() {
   return (
     <div className="w-full flex flex-col gap-20">
       <Hero
-        title="NOTRE SERVICES"
+        title={t("hero.title")}
         videos={["assets/videos/service.mp4"]}
-        subtitle="Pour un futur plus vert, dès maintenant."
-        description="Nous accompagnons nos clients et partenaires dans la réussite de leurs projets énergétiques en électricité, hydraulique et aval pétrolier. Notre expertise couvre toutes les étapes clés : de la conception à la mise en service, avec un accompagnement technique et stratégique de bout en bout."
-        buttonText="ENTREZ EN CONTACT"
+        subtitle={t("hero.title_description_1")}
+        description={t("hero.description")}
+        buttonText={t("hero.button")}
         buttonLink="/contact"
         overlayOpacity={0.7}
       />

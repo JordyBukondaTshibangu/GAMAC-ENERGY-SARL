@@ -1,6 +1,8 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import React, { useState } from "react";
+
 import GMCForm from "./gmc-form";
 import GMCMap from "./gmc-map";
 import GMCContactSidebar from "./gmc-sidebar";
@@ -19,37 +21,37 @@ type FormData = {
   message: string;
 };
 
-const requestTypes: RequestType[] = [
-  {
-    id: 1,
-    title: "Nos activités",
-    description: "Nos solutions peuvent vous aider à atteindre vos objectifs.",
-  },
-  {
-    id: 2,
-    title: "Achats et approvisionnements",
-    description:
-      "Devenez fournisseur et contribuez à notre chaîne d’approvisionnement durable.",
-  },
-  {
-    id: 3,
-    title: "Innovation",
-    description:
-      "Proposez des idées innovantes et durables pour renforcer nos projets.",
-  },
-  {
-    id: 4,
-    title: "Presse et collaborations éditoriales",
-    description:
-      "Proposez des collaborations, des interviews ou des articles éditoriaux.",
-  },
-  {
-    id: 5,
-    title: "Autres demandes",
-    description: "Pour toute demande générale ou non spécifiée.",
-  },
-];
 const GMCContact: React.FC = () => {
+  const t = useTranslations("Contact.request_types.items");
+
+  const requestTypes: RequestType[] = [
+    {
+      id: 1,
+      title: t("activites.title"),
+      description: t("activites.description"),
+    },
+    {
+      id: 2,
+      title: t("achats.title"),
+      description: t("achats.description"),
+    },
+    {
+      id: 3,
+      title: t("innovation.title"),
+      description: t("innovation.description"),
+    },
+    {
+      id: 4,
+      title: t("presse.title"),
+      description: t("presse.description"),
+    },
+    {
+      id: 5,
+      title: t("autres.title"),
+      description: t("autres.description"),
+    },
+  ];
+
   const [openSidebar, setOpenSidebar] = useState<boolean>(true);
   const [selectedRequest, setSelectedRequest] = useState<RequestType>(
     requestTypes[0]

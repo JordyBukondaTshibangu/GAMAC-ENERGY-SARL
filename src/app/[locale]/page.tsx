@@ -1,3 +1,7 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 import GMCGetInTouch from "@/components/common/gmc-get-in-touch";
 import Hero from "@/components/common/gmc-hero";
 import GMCOurPartners from "@/components/molecules/home/gmc-our-partners";
@@ -7,14 +11,16 @@ import GMCWelcome from "@/components/molecules/home/gmc-welcome";
 import GMCWhatWeDo from "@/components/molecules/home/gmc-what-we-do";
 
 export default function Home() {
+  const t = useTranslations("HomePage");
+
   return (
     <div className="flex flex-col gap-20">
       <Hero
         videos={["assets/videos/hero-2.mp4", "assets/videos/hero-1.mp4"]}
-        title="GAMAC   ENERGY  SARL"
-        subtitle="Ensemble, donnons vie à une énergie durable."
-        description="Chaque projet est une opportunité d’élever notre niveau d’exigence et de prouver que l’Afrique mérite le meilleur. "
-        buttonText="ENTREZ EN CONTACT"
+        title={t("hero.title")}
+        subtitle={t("hero.title_description_1")}
+        description={t("hero.description")}
+        buttonText={t("hero.button")}
         buttonLink="/contact"
         overlayOpacity={0.7}
       />

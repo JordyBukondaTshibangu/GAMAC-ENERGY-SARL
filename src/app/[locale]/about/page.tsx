@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useRef } from "react";
 
 import GMCGetInTouch from "@/components/common/gmc-get-in-touch";
@@ -20,16 +21,18 @@ interface SmoothScrollOptions {
 }
 
 function AboutUsPage() {
-  const aboutRef = useRef(null);
-  const ourVision = useRef(null);
-  const motDuDgRef = useRef(null);
-  const contactRef = useRef(null);
+  const t = useTranslations("AboutUs");
+
+  const aboutRef = useRef<HTMLElement | null>(null);
+  const ourVision = useRef<HTMLElement | null>(null);
+  const motDuDgRef = useRef<HTMLElement | null>(null);
+  const contactRef = useRef<HTMLElement | null>(null);
 
   const sections = [
-    { label: "À propos de Nous", ref: aboutRef },
-    { label: "Notre Vision", ref: ourVision },
-    { label: "Un mot du Directeur Général", ref: motDuDgRef },
-    { label: "Entrez en contact", ref: contactRef },
+    { label: t("navigation.about"), ref: aboutRef },
+    { label: t("navigation.vision"), ref: ourVision },
+    { label: t("navigation.mot_du_dg"), ref: motDuDgRef },
+    { label: t("navigation.contact"), ref: contactRef },
   ];
 
   const scrollToSection = (
@@ -43,9 +46,9 @@ function AboutUsPage() {
     <div className="w-full flex flex-col gap-20">
       <Hero
         videos={["assets/videos/about.mp4"]}
-        title="A PROPOS DE NOUS"
-        subtitle="L’énergie verte à portée de tous."
-        description="GAMAC ENERGY est née d’une conviction : l’avenir appartient à l’énergie renouvelable. Nous innovons chaque jour pour rendre l’énergie propre accessible et performante. Notre mission : bâtir un futur durable, pour les générations d’aujourd’hui et de demain."
+        title={t("hero.title")}
+        subtitle={t("hero.title_description_1")}
+        description={t("hero.description")}
         overlayOpacity={0.7}
       />
 
@@ -58,6 +61,7 @@ function AboutUsPage() {
       <section ref={ourVision}>
         <GMCVision />
       </section>
+
       <section ref={motDuDgRef}>
         <GMCMotDuDG />
       </section>
