@@ -1,11 +1,12 @@
 import HeroImage from "@/components/common/gmc-hero-image";
 import GMCMaterialsList from "@/components/molecules/services/gmc-materials-list";
+import GMCSpecializedEquipment from "@/components/molecules/services/gmc-special-equipment-lit";
 
 export default function GMCSPhysicalService() {
   return (
     <div className="w-full flex flex-col gap-20">
       <HeroImage
-        title="FOURNISSEURS D'EQUIPEMENTSÉLECTRIQUES"
+        title="FOURNISSEURS D'EQUIPEMENTS ÉLECTRIQUES"
         image="/assets/images/solar-panels.jpg"
         subtitle="Pour un futur plus vert, dès maintenant."
         description=""
@@ -15,6 +16,7 @@ export default function GMCSPhysicalService() {
       />
 
       <GMCMaterialsList />
+      <GMCSpecializedEquipment />
     </div>
   );
 }

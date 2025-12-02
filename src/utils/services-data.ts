@@ -40,7 +40,7 @@ export const electricityAndOil = [
   {
     category: "Électricité et Hydrauliques",
     items: [
-      "Construction : Centrales solaires/Hydro/thermiques, des lignes HT/MT/BT, postes de transformation, réseaux de distribution et des forages d’eau potable.",
+      "Construction : Centrales solaires/Hydro/thermiques, des lignes HT/MT/BT, postes de transformation, réseaux de distribution et des forages d’eau potable  et systèmes de pompage",
       "Maintenance : entretien préventif et correctif des centrales solaires/Hydro/thermiques, postes, transformateurs, lignes, équipements électriques, des forages et pompes.",
       "Modifications & extensions : adaptation de réseaux existants, ajout de nouvelles capacités, raccordement au réseau national (SNEL), Remplacement ou modernisation de pompes (passage de manuel à électrique/solaire), Extension du réseau de distribution à partir d’un forage existant et Ajout de systèmes de stockage supplémentaires (cuves, réservoirs).",
       "Mise aux normes : mise en conformité aux standards internationaux (CEI, IEEE), exigences locales (ARE, MRHE), Mise en conformité avec les standards nationaux et internationaux (OMS, ISO, normes sanitaires) et Installation de dispositifs de contrôle de la qualité de l’eau.",

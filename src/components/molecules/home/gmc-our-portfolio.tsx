@@ -5,21 +5,20 @@ function GMCOurPortfolio() {
   const portfolio = [
     {
       image: "/assets/images/mission-1.jpg",
-      title: "Lorem Ipsium",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit minus quod, dolorum dignissimos .",
+      title: "Bureau d’Études & Ingénierie-Conseil",
+      description: "GAMAC Energy propose une offre complète d’ingénierie",
     },
     {
       image: "/assets/images/mission-2.jpg",
-      title: "Sit Amet Consectetur",
+      title: "EPC – Construction, Réhabilitation & Services Techniques",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit minus quod, dolorum dignissimos .",
+        "Grâce à notre équipe pluridisciplinaire, nous garantissons des projets livrés clé en main, conformes aux exigences internationales.",
     },
     {
       image: "/assets/images/mission-3.jpg",
-      title: "Adipisicing Elit",
+      title: "Fourniture d’Équipements Électriques",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit minus quod, dolorum dignissimos .",
+        "GAMAC Energy dispose d’un réseau de partenaires internationaux permettant d’approvisionner des équipements spécialisés",
     },
   ];
   return (
@@ -31,8 +30,10 @@ function GMCOurPortfolio() {
         {portfolio.map(({ image, title, description }, index) => (
           <div key={index} className="flex flex-col gap-8 lg:items-center">
             <Image width={800} height={600} alt={title} src={image} />
-            <h4 className="text-3xl">{title}</h4>
-            <p className="text-lg leading-10 font-normal lg:text-center lg:max-h-[180px]">
+            <h4 className="text-2xl font-medium leading-10 text-[#B71C1C] lg:text-xl text-center h-14">
+              {title}
+            </h4>
+            <p className="text-lg leading-10 font-normal lg:text-center lg:h-32">
               {description}
             </p>
             <Link
