@@ -35,8 +35,8 @@ const GMCForm: React.FC<GMCFormProps> = ({
   const t = useTranslations("Contact");
 
   return (
-    <main className="max-w-7xl mx-auto py-20">
-      <div className="flex flex-col gap-52">
+    <main className="max-w-7xl mx-auto py-10 lg:py-20">
+      <div className="flex flex-col gap-16 lg:gap-52">
         <div className="flex flex-col gap-6">
           <span className="uppercase text-md font-bold">
             {t("form_section.subtitle")}

@@ -73,7 +73,7 @@ const GMCContact: React.FC = () => {
   };
 
   return (
-    <section className="w-full mx-auto py-20 px-4 sm:px-6 lg:px-8">
+    <section className="w-full mx-auto lg:py-20 px-4 sm:px-6 lg:px-8">
       <GMCForm
         formData={formData}
         selectedRequest={selectedRequest}

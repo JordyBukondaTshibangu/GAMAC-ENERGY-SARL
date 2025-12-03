@@ -6,8 +6,8 @@ function GMCTeamDescription() {
   const t = useTranslations("Team.team");
 
   return (
-    <section className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
-      <h2 className="w-full flex flex-col gap-6 text-5xl mb-16 leading-16">
+    <section className="max-w-7xl mx-auto lg:py-20 px-4 sm:px-6 lg:px-8">
+      <h2 className="w-full flex flex-col lg:gap-6 text-xl lg:text-5xl mb-8 lg:mb-16 leading-12 lg:leading-16">
         <span>{t("subtitle")}</span>
         <span className="font-bold uppercase">{t("title")}</span>
       </h2>

@@ -42,14 +42,14 @@ function GMCWelcome() {
           {t("welcome_to_gamac.description_4")}
         </p>
 
-        <ul className="flex flex-col gap-2 px-10 list-disc">
-          <li className="text-md font-medium italic leading-normal">
+        <ul className="flex flex-col gap-2 px-5 lg:px-10 list-disc">
+          <li className="text-lg font-medium lg:italic leading-10">
             {t("welcome_to_gamac.metrics.metric_1")}
           </li>
-          <li className="text-md font-medium italic leading-normal">
+          <li className="text-lg font-medium lg:italic leading-10">
             {t("welcome_to_gamac.metrics.metric_2")}
           </li>
-          <li className="text-md font-medium italic leading-normal">
+          <li className="text-lg font-medium lg:italic leading-10">
             {t("welcome_to_gamac.metrics.metric_3")}
           </li>
         </ul>

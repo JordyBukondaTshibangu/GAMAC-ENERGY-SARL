@@ -35,23 +35,23 @@ export default function GMCPrestationServiceCard({
       </div>
 
       <div
-        className={`w-full lg:min-w-[50%] space-y-5 bg-slate-50 p-10  xl:py-6  ${
+        className={`w-full lg:min-w-[50%] space-y-10 lg:space-y-5 bg-slate-50 px-5 py-10 lg:p-10  xl:py-6  ${
           order! % 2
             ? "lg:translate-x-40 2xl:translate-x-25"
             : "lg:-translate-x-40 2xl:translate-x-10"
         }`}
       >
-        <h2 className="text-2xl xl:text-3xl leading-10 xl:leading-10 font-bold text-gray-900">
+        <h2 className="text-2xl xl:text-3xl leading-10 font-bold text-gray-900">
           {title}
         </h2>
 
-        <p className="text-base xl:text-lg leading-8 xl:leading-10 font-normal">
+        <p className="text-lg leading-8 xl:leading-10 font-normal">
           {description}
         </p>
 
         <Link
           href={`/services/${link}`}
-          className="w-fit flex items-center gap-2 bg-[#B71C1C] hover:bg-[#D32F2F] cursor-pointer text-white px-14 py-2 rounded-md font-medium transition-all  text-xl h-14 duration-300"
+          className="w-full lg:w-fit flex items-center justify-center gap-2 bg-[#B71C1C] hover:bg-[#D32F2F] cursor-pointer text-white px-14 py-2 rounded-md font-medium transition-all  text-xl h-14 duration-300"
           type="submit"
         >
           Voir plus

@@ -1,6 +1,6 @@
 function GMCMap() {
   return (
-    <div className="w-full mt-64">
+    <div className="w-full mt-16 lg:mt-64">
       <h3 className="text-xl font-semibold text-gray-800 mb-4">
         Find us on the map
       </h3>

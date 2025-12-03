@@ -11,7 +11,7 @@ function ContactPage() {
   return (
     <>
       <Hero
-        videos={["assets/videos/contact.mp4"]}
+        videos={["/assets/videos/contact.mp4"]}
         title={t("hero.title")}
         subtitle={t("hero.subtitle")}
         description={t("hero.description")}

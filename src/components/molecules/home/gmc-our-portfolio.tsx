@@ -35,15 +35,15 @@ function GMCOurPortfolio() {
         {portfolio.map(({ image, title, description }, index) => (
           <div key={index} className="flex flex-col gap-8 lg:items-center">
             <Image width={800} height={600} alt={title} src={image} />
-            <h4 className="text-2xl font-medium leading-10 text-[#B71C1C] lg:text-xl text-center h-14">
+            <h4 className="text-xl font-medium leading-8 lg:leading-10 text-[#B71C1C] lg:text-xl lg:text-center lg:h-14">
               {title}
             </h4>
-            <p className="text-lg leading-10 font-normal lg:text-center lg:h-32">
+            <p className="text-lg leading-8 lg:leading-10 font-normal lg:text-center lg:h-32">
               {description}
             </p>
             <Link
               href="/services"
-              className="w-64 bg-[#B71C1C] hover:bg-[#D32F2F] cursor-pointer text-white flex items-center justify-center rounded-md font-medium transition-all text-xl h-14 duration-300"
+              className="w-full lg:w-64 bg-[#B71C1C] hover:bg-[#D32F2F] cursor-pointer text-white flex items-center justify-center rounded-md font-medium transition-all text-xl h-14 duration-300"
             >
               {t("button")}
             </Link>

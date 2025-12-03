@@ -14,7 +14,7 @@ function TeamPage() {
     <div className="flex flex-col gap-20">
       <Hero
         title={t("hero.title")}
-        videos={["assets/videos/team.mp4"]}
+        videos={["/assets/videos/team.mp4"]}
         subtitle={t("hero.title_description_1")}
         description={t("hero.description")}
         buttonText={t("hero.button")}

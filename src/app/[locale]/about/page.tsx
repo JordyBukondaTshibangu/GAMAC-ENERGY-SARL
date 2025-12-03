@@ -45,7 +45,7 @@ function AboutUsPage() {
   return (
     <div className="w-full flex flex-col gap-20">
       <Hero
-        videos={["assets/videos/about.mp4"]}
+        videos={["/assets/videos/about.mp4"]}
         title={t("hero.title")}
         subtitle={t("hero.title_description_1")}
         description={t("hero.description")}

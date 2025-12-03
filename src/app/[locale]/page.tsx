@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-20">
       <Hero
-        videos={["assets/videos/hero-2.mp4", "assets/videos/hero-1.mp4"]}
+        videos={["/assets/videos/hero-2.mp4", "/assets/videos/hero-1.mp4"]}
         title={t("hero.title")}
         subtitle={t("hero.title_description_1")}
         description={t("hero.description")}
