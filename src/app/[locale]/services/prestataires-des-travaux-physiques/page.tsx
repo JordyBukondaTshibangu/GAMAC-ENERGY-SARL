@@ -2,61 +2,28 @@
 
 import { useTranslations } from "next-intl";
 
-import HeroImage from "@/components/common/gmc-hero-image";
-import GMCServiceList from "@/components/molecules/services/gmc-service-list";
+import { ButtonLink } from "@/components/atoms/button";
+import GMCGetInTouch from "@/components/common/gmc-get-in-touch";
+import PageHero from "@/components/common/page-hero";
+import GMCServiceList, {
+  type ServiceCategory,
+} from "@/components/molecules/services/gmc-service-list";
 
 export default function GMCSPhysicalService() {
-  const tHero = useTranslations("TravauxPhysique.hero");
-  const tServices = useTranslations("TravauxPhysique");
-
-  const rawServices = tServices.raw("services") as {
-    title: string;
-    items: string | string[];
-  }[];
-
-  const cases = rawServices.map((service) => {
-    const title: string = service.title;
-    const itemsRaw = service.items;
-
-    let items: string[] = [];
-
-    if (
-      title === "Électricité et Hydrauliques" &&
-      Array.isArray(itemsRaw) &&
-      itemsRaw.length > 0 &&
-      typeof itemsRaw[0] === "object" &&
-      !Array.isArray(itemsRaw[0])
-    ) {
-      const grouped = itemsRaw[0] as Record<string, string[]>;
-
-      items = Object.entries(grouped).map(([sectionLabel, sectionItems]) => {
-        const joined = sectionItems.join(", ");
-        return `${sectionLabel} : ${joined}`;
-      });
-    } else if (Array.isArray(itemsRaw)) {
-      // For "Pétrole & Gaz" it's already a string[]
-      items = itemsRaw as string[];
-    }
-
-    return {
-      category: title,
-      items,
-    };
-  });
+  const t = useTranslations("TravauxPhysique");
+  const common = useTranslations("Common");
 
   return (
-    <div className="w-full flex flex-col gap-20">
-      <HeroImage
-        title={tHero("title")}
-        image="/assets/images/manual-service.jpg"
-        subtitle={tHero("subtitle")}
-        description={tHero("description")}
-        buttonText={tHero("button")}
-        buttonLink="/contact"
-        overlayOpacity={0.7}
+    <>
+      <PageHero
+        media={{ type: "image", src: "/assets/images/solar-panels.jpg" }}
+        breadcrumb={{ label: common("all_services"), href: "/services" }}
+        title={t("hero.title")}
+        description={t("hero.description")}
+        actions={<ButtonLink href="/contact">{t("hero.button")}</ButtonLink>}
       />
-
-      <GMCServiceList cases={cases} />
-    </div>
+      <GMCServiceList categories={t.raw("services") as ServiceCategory[]} />
+      <GMCGetInTouch />
+    </>
   );
 }

@@ -1,22 +1,66 @@
-type ButtonProps = {
-  buttonText: string;
-  type?: "button" | "submit" | "reset" | undefined;
-  disabled?: boolean;
-  onClick?: () => void;
-  size?: "sm" | "md" | "lg" | "xl";
+import { Link } from "@/i18n/navigation";
+import type { ComponentProps, ReactNode } from "react";
+
+type Variant = "primary" | "light" | "outline-light" | "outline-dark";
+
+const base =
+  "inline-flex items-center justify-center gap-2 rounded-[3px] px-6 h-12 text-[15px] font-semibold tracking-[0.005em] transition-colors duration-200 whitespace-nowrap cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed";
+
+const variants: Record<Variant, string> = {
+  primary: "bg-flame text-white hover:bg-flame-dark",
+  light: "bg-white text-ink hover:bg-paper",
+  "outline-light":
+    "border border-white/40 text-white hover:border-white hover:bg-white/10",
+  "outline-dark": "border border-ink/25 text-ink hover:border-ink hover:bg-ink/5",
 };
 
-function Button({ buttonText, type, disabled, size }: ButtonProps) {
+export function buttonClass(variant: Variant = "primary", extra = "") {
+  return `${base} ${variants[variant]} ${extra}`;
+}
+
+type ButtonLinkProps = {
+  href: ComponentProps<typeof Link>["href"];
+  variant?: Variant;
+  className?: string;
+  children: ReactNode;
+};
+
+export function ButtonLink({
+  href,
+  variant = "primary",
+  className = "",
+  children,
+}: ButtonLinkProps) {
+  return (
+    <Link href={href} className={buttonClass(variant, className)}>
+      {children}
+    </Link>
+  );
+}
+
+type ButtonProps = {
+  buttonText: string;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
+  onClick?: () => void;
+  variant?: Variant;
+  className?: string;
+};
+
+function Button({
+  buttonText,
+  type = "button",
+  disabled,
+  onClick,
+  variant = "primary",
+  className = "",
+}: ButtonProps) {
   return (
     <button
-      className={`"w-full bg-[#B71C1C] hover:bg-[#D32F2F] cursor-pointer text-white px-6 py-2 rounded-md font-medium transition-all
-  " ${disabled ? "opacity-50 cursor-not-allowed" : ""} ${
-        size === "sm" ? "w-32 h-5 text-sm" : ""
-      } ${size === "lg" ? " w-60 h-14 text-lg" : ""} ${
-        size === "md" ? "w-40 text-md" : ""
-      } ${size === "xl" ? "w-80 text-xl h-14" : ""}`}
+      className={buttonClass(variant, className)}
       disabled={disabled}
-      type={type || "button"}
+      type={type}
+      onClick={onClick}
     >
       {buttonText}
     </button>

@@ -1,58 +1,83 @@
 "use client";
 
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 function GMCWelcome() {
   const t = useTranslations("HomePage");
+  const about = useTranslations("AboutUs");
+
+  const facts = [
+    { value: t("facts.founded_value"), label: t("facts.founded_label") },
+    { value: t("facts.roles_value"), label: t("facts.roles_label") },
+    { value: t("facts.sectors_value"), label: t("facts.sectors_label"), small: true },
+  ];
 
   return (
-    <section className="max-w-7xl mx-auto py-10 lg:py-20 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-14">
-      {/* Image */}
-      <div className="w-full h-full min-h-[600px] overflow-hidden bg-red-300">
-        <Image
-          src="/assets/images/mission-1.jpg"
-          alt="GAMAC ENERGY SARL"
-          width={400}
-          height={800}
-          className="object-cover w-full min-h-[600px] h-full"
-        />
-      </div>
-
-      {/* Text Content */}
-      <div className="w-full flex flex-col gap-3">
-        <h2 className="w-full flex flex-col gap-2 text-3xl leading-12">
-          <span className="text-[16px]">{t("welcome_to_gamac.title")}</span>
-          <span className="font-bold uppercase">
+    <section className="py-24 md:py-32">
+      <div className="container-x grid gap-14 lg:grid-cols-12 lg:gap-16">
+        <div className="lg:col-span-7">
+          <p className="text-[15px] font-medium text-flame">
             {t("welcome_to_gamac.subtitle")}
-          </span>
-        </h2>
+          </p>
+          <h2 className="display mt-4 text-[clamp(2rem,3.8vw,3.2rem)] text-ink">
+            {about("historic.statement")}
+          </h2>
+          <p className="prose-measure mt-8 text-[18px] leading-relaxed text-muted">
+            <strong className="font-semibold text-text">
+              {t("welcome_to_gamac.description_1")}
+            </strong>{" "}
+            {t("welcome_to_gamac.description_2")}{" "}
+            {t("welcome_to_gamac.description_3")}
+          </p>
 
-        <p className="text-lg leading-10 font-normal">
-          <span className="font-bold">
-            {t("welcome_to_gamac.description_1")}
-          </span>
-          {t("welcome_to_gamac.description_2")}
-          <span className="font-bold">
-            {t("welcome_to_gamac.description_3").split("welcome_to_gamac.,")[0]}
-          </span>
-        </p>
+          <dl className="mt-12 grid grid-cols-2 gap-x-8 gap-y-8 border-t border-line pt-8 md:grid-cols-3">
+            {facts.map((f) => (
+              <div key={f.label} className={f.small ? "col-span-2 md:col-span-1" : ""}>
+                <dt className="sr-only">{f.label}</dt>
+                <dd
+                  className={`heading text-ink ${
+                    f.small ? "text-[20px] leading-tight" : "text-[44px] leading-none"
+                  }`}
+                >
+                  {f.value}
+                </dd>
+                <dd className="mt-2 text-[14px] text-muted">{f.label}</dd>
+              </div>
+            ))}
+          </dl>
 
-        <p className="text-lg leading-10 font-normal">
-          {t("welcome_to_gamac.description_4")}
-        </p>
+          <Link
+            href="/about"
+            className="mt-10 inline-block text-[16px] font-semibold text-ink underline decoration-flame decoration-2 underline-offset-[6px] transition-colors hover:text-flame"
+          >
+            {t("welcome_to_gamac.link")}
+          </Link>
+        </div>
 
-        <ul className="flex flex-col gap-2 px-5 lg:px-10 list-disc">
-          <li className="text-lg font-medium lg:italic leading-10">
-            {t("welcome_to_gamac.metrics.metric_1")}
-          </li>
-          <li className="text-lg font-medium lg:italic leading-10">
-            {t("welcome_to_gamac.metrics.metric_2")}
-          </li>
-          <li className="text-lg font-medium lg:italic leading-10">
-            {t("welcome_to_gamac.metrics.metric_3")}
-          </li>
-        </ul>
+        <div className="relative lg:col-span-5">
+          <div className="relative aspect-[4/5] w-full overflow-hidden bg-paper">
+            <Image
+              src="/assets/images/materials.jpg"
+              alt={t("welcome_to_gamac.metrics.metric_2")}
+              fill
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="absolute -bottom-8 -left-6 hidden w-[46%] border-[6px] border-white bg-paper md:block lg:-left-12">
+            <div className="relative aspect-square">
+              <Image
+                src="/assets/images/mission-3.jpg"
+                alt=""
+                fill
+                sizes="20vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

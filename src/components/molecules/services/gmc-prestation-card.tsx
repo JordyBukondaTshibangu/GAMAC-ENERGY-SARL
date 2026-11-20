@@ -1,63 +1,64 @@
-import { ArrowRight } from "lucide-react";
+import { ButtonLink } from "@/components/atoms/button";
 import Image from "next/image";
-import Link from "next/link";
 
 type PrestationCardProps = {
+  id: string;
   link: string;
   title: string;
   image: string;
-  order?: number;
+  reverse?: boolean;
+  tinted?: boolean;
   description: string;
+  highlights: string[];
+  linkLabel: string;
 };
 
 export default function GMCPrestationServiceCard({
+  id,
   link,
-  order,
   title,
   image,
+  reverse,
+  tinted,
   description,
+  highlights,
+  linkLabel,
 }: PrestationCardProps) {
-  console.log("Link", link);
   return (
-    <div
-      className={`max-w-7xl mx-auto w-full flex flex-col gap-10 md:flex-row items-center bg-white ${
-        order! % 2 ? "md:flex-row-reverse" : ""
-      }`}
-    >
-      <div className="hidden lg:flex rounded-xl md:min-w-[50%]">
-        <Image
-          src={image}
-          alt={title}
-          width={900}
-          height={900}
-          className="w-full min-w-[500px] 2xl:min-w-[900px] lg:min-h-[600px] h-auto object-cover rounded-xl"
-        />
-      </div>
-
-      <div
-        className={`w-full lg:min-w-[50%] space-y-10 lg:space-y-5 bg-slate-50 px-5 py-10 lg:p-10  xl:py-6  ${
-          order! % 2
-            ? "lg:translate-x-40 2xl:translate-x-25"
-            : "lg:-translate-x-40 2xl:translate-x-10"
-        }`}
-      >
-        <h2 className="text-2xl xl:text-3xl leading-10 font-bold text-gray-900">
-          {title}
-        </h2>
-
-        <p className="text-lg leading-8 xl:leading-10 font-normal">
-          {description}
-        </p>
-
-        <Link
-          href={`/services/${link}`}
-          className="w-full lg:w-fit flex items-center justify-center gap-2 bg-[#B71C1C] hover:bg-[#D32F2F] cursor-pointer text-white px-14 py-2 rounded-md font-medium transition-all  text-xl h-14 duration-300"
-          type="submit"
+    <section id={id} className={`py-20 md:py-28 ${tinted ? "bg-paper" : ""}`}>
+      <div className="container-x grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-16">
+        <div
+          className={`relative aspect-[4/3] overflow-hidden bg-line lg:col-span-6 ${
+            reverse ? "lg:order-2" : ""
+          }`}
         >
-          Voir plus
-          <ArrowRight className="w-4 h-4" />
-        </Link>
+          <Image
+            src={image}
+            alt=""
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
+          />
+        </div>
+
+        <div className="lg:col-span-6">
+          <h2 className="display text-[clamp(1.9rem,3.2vw,2.7rem)] text-ink">{title}</h2>
+          <p className="mt-6 text-[18px] leading-relaxed text-muted">{description}</p>
+          <ul className="mt-8 flex flex-wrap gap-2">
+            {highlights.map((h) => (
+              <li
+                key={h}
+                className="border border-ink/15 bg-white px-3 py-1.5 text-[14px] font-medium text-ink"
+              >
+                {h}
+              </li>
+            ))}
+          </ul>
+          <ButtonLink href={`/services/${link}`} className="mt-10">
+            {linkLabel}
+          </ButtonLink>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

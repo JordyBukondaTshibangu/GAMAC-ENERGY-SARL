@@ -1,98 +1,76 @@
 "use client";
 
+import { telHref } from "@/utils/site";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { useTranslations } from "next-intl";
-import React, { useState } from "react";
-
 import GMCForm from "./gmc-form";
 import GMCMap from "./gmc-map";
-import GMCContactSidebar from "./gmc-sidebar";
 
-type RequestType = {
-  id: number;
-  title: string;
-  description: string;
-};
+const GMCContact = () => {
+  const t = useTranslations("Contact.form_section");
+  const f = useTranslations("Footer");
 
-type FormData = {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  message: string;
-};
-
-const GMCContact: React.FC = () => {
-  const t = useTranslations("Contact.request_types.items");
-
-  const requestTypes: RequestType[] = [
+  const details = [
     {
-      id: 1,
-      title: t("activites.title"),
-      description: t("activites.description"),
+      icon: Phone,
+      label: f("contact.phone_label"),
+      value: f("contact.phone_number"),
+      href: telHref(f("contact.phone_number")),
     },
     {
-      id: 2,
-      title: t("achats.title"),
-      description: t("achats.description"),
+      icon: Mail,
+      label: f("contact.email_label"),
+      value: f("contact.email_address"),
+      href: `mailto:${f("contact.email_address")}`,
     },
     {
-      id: 3,
-      title: t("innovation.title"),
-      description: t("innovation.description"),
-    },
-    {
-      id: 4,
-      title: t("presse.title"),
-      description: t("presse.description"),
-    },
-    {
-      id: 5,
-      title: t("autres.title"),
-      description: t("autres.description"),
+      icon: MapPin,
+      label: f("contact.address_label"),
+      value: f("address_text"),
+      hint: t("address_hint"),
     },
   ];
 
-  const [openSidebar, setOpenSidebar] = useState<boolean>(true);
-  const [selectedRequest, setSelectedRequest] = useState<RequestType>(
-    requestTypes[0]
-  );
-
-  const [formData, setFormData] = useState<FormData>({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
   return (
-    <section className="w-full mx-auto lg:py-20 px-4 sm:px-6 lg:px-8">
-      <GMCForm
-        formData={formData}
-        selectedRequest={selectedRequest}
-        handleInputChange={handleInputChange}
-        setOpenSidebar={setOpenSidebar}
-      />
+    <>
+      <section className="py-20 md:py-28">
+        <div className="container-x grid gap-14 lg:grid-cols-12 lg:gap-16">
+          <aside className="lg:col-span-4">
+            <h2 className="heading border-t-2 border-ink pt-5 text-[26px] text-ink">
+              {t("info_title")}
+            </h2>
+            <ul className="mt-8 space-y-7">
+              {details.map(({ icon: Icon, label, value, href, hint }) => (
+                <li key={label} className="flex gap-4">
+                  <span className="grid h-10 w-10 shrink-0 place-items-center bg-ink text-sun">
+                    <Icon size={18} aria-hidden />
+                  </span>
+                  <div>
+                    <p className="text-[14px] text-muted">{label}</p>
+                    {href ? (
+                      <a
+                        href={href}
+                        className="text-[17px] font-semibold text-ink hover:text-flame"
+                      >
+                        {value}
+                      </a>
+                    ) : (
+                      <p className="text-[17px] font-semibold text-ink">{value}</p>
+                    )}
+                    {hint && <p className="mt-1 text-[14px] text-muted">{hint}</p>}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </aside>
 
-      <GMCMap />
-
-      {openSidebar && (
-        <GMCContactSidebar
-          isOpen={openSidebar}
-          requestTypes={requestTypes}
-          selectedRequest={selectedRequest}
-          setSelectedRequest={setSelectedRequest}
-          onOverlayClick={() => setOpenSidebar(false)}
-        />
-      )}
-    </section>
+          <div className="lg:col-span-8">
+            <GMCForm recipient={f("contact.email_address")} />
+          </div>
+        </div>
+      </section>
+      <GMCMap title={t("map_title")} />
+    </>
   );
 };
 

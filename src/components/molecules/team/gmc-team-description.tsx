@@ -6,17 +6,15 @@ function GMCTeamDescription() {
   const t = useTranslations("Team.team");
 
   return (
-    <section className="max-w-7xl mx-auto lg:py-20 px-4 sm:px-6 lg:px-8">
-      <h2 className="w-full flex flex-col lg:gap-6 text-xl lg:text-5xl mb-8 lg:mb-16 leading-12 lg:leading-16">
-        <span>{t("subtitle")}</span>
-        <span className="font-bold uppercase">{t("title")}</span>
-      </h2>
-
-      <p className="text-lg leading-10 font-normal">
-        {t("description_1")}
-        <span className="font-bold">{t("description_2")}</span>
-        {t("description_3")}
-      </p>
+    <section className="pt-24 md:pt-32">
+      <div className="container-x grid gap-8 lg:grid-cols-12 lg:gap-16">
+        <h2 className="display text-[clamp(2rem,3.8vw,3.2rem)] text-ink lg:col-span-6">
+          {t("title")}
+        </h2>
+        <p className="text-[18px] leading-relaxed text-muted lg:col-span-6 lg:pt-2">
+          {t("description")}
+        </p>
+      </div>
     </section>
   );
 }

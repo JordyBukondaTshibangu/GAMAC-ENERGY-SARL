@@ -1,61 +1,39 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
+type Item = { title: string; text: string };
+
+/** "What sets us apart" — the four differentiators from the company profile. */
 function GMCWhatWeDo() {
-  const t = useTranslations("HomePage.que_fait_gamac");
+  const t = useTranslations("HomePage.why");
+  const items = t.raw("items") as Item[];
+  const [open, close] = useLocale() === "fr" ? ["« ", " »"] : ["“", "”"];
 
   return (
-    <div className="relative bg-[url('/assets/images/mission-1.jpg')] bg-cover bg-center w-full min-h-[700px] flex flex-col text-white gap-8">
-      <div className="flex flex-col items-center w-full h-full bg-black/70 gap-24 py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto w-full flex flex-col gap-32">
-          {/* Title */}
-          <h2 className="w-full lg:w-1/3 h-full flex flex-col gap-20 text-3xl leading-12">
-            <span className="font-bold uppercase">{t("title")}</span>
-            <span className="text-2xl leading-10">{t("description")}</span>
-          </h2>
-
-          {/* Content */}
-          <div className="w-full lg:w-1/2 self-end flex flex-col gap-6 h-full">
-            {/* First paragraph */}
-            <p className="text-xl leading-10 font-normal">
-              {t("description_1")}
-              <span className="font-bold italic">{t("description_1_1")}</span>
+    <section className="py-24 md:py-32">
+      <div className="container-x grid gap-14 lg:grid-cols-12 lg:gap-16">
+        <div className="lg:col-span-5">
+          <h2 className="display text-[clamp(2.1rem,4.4vw,3.6rem)] text-ink">{t("title")}</h2>
+          <blockquote className="mt-10 border-l-[3px] border-flame pl-6">
+            <p className="heading text-[22px] font-medium leading-snug text-ink">
+              {open}
+              {t("quote")}
+              {close}
             </p>
-
-            {/* Chain of value */}
-            <p className="text-xl leading-10 font-normal">
-              {t("description_2")}
-            </p>
-
-            {/* Metrics List */}
-            <ul className="flex flex-col gap-2 px-10 list-disc">
-              <li className="text-xl font-medium leading-normal">
-                {t("metrics.metric_1")}
-              </li>
-              <li className="text-xl font-medium leading-normal">
-                {t("metrics.metric_2")}
-              </li>
-              <li className="text-xl font-medium leading-normal">
-                {t("metrics.metric_3")}
-              </li>
-              <li className="text-xl font-medium leading-normal">
-                {t("metrics.metric_4")}
-              </li>
-              <li className="text-xl font-medium leading-normal">
-                {t("metrics.metric_5")}
-              </li>
-            </ul>
-
-            {/* Final paragraph */}
-            <p className="text-xl leading-10 font-normal">
-              {t("description_3")}
-              <span className="font-bold italic">{t("description_3_1")}</span>
-            </p>
-          </div>
+          </blockquote>
         </div>
+
+        <ul className="grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:col-span-7 lg:pt-3">
+          {items.map((item) => (
+            <li key={item.title} className="border-t-2 border-ink pt-5">
+              <h3 className="heading text-[22px] text-ink">{item.title}</h3>
+              <p className="mt-3 text-[16px] leading-relaxed text-muted">{item.text}</p>
+            </li>
+          ))}
+        </ul>
       </div>
-    </div>
+    </section>
   );
 }
 

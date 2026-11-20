@@ -1,16 +1,28 @@
-import Hero from "@/components/common/gmc-hero";
+"use client";
+
+import { useTranslations } from "next-intl";
+
+import { ButtonLink } from "@/components/atoms/button";
+import GMCGetInTouch from "@/components/common/gmc-get-in-touch";
+import PageHero from "@/components/common/page-hero";
 
 function ProjectsPage() {
+  const t = useTranslations("Projects");
+
   return (
-    <Hero
-      title="NOTRE PROJETS"
-      videos={["/assets/videos/projets.mp4"]}
-      subtitle="La nature nous inspire, nous innovons."
-      description="Nous accompagnons nos clients et partenaires dans la réussite de leurs projets énergétiques en électricité, hydraulique et aval pétrolier. Notre expertise couvre le cycle de vie de vos infrastructures énergétiques"
-      buttonText="ENTREZ EN CONTACT"
-      buttonLink="/contact"
-      overlayOpacity={0.7}
-    />
+    <>
+      <PageHero
+        media={{
+          type: "video",
+          sources: ["/assets/videos/projets.mp4"],
+          poster: "/assets/images/solar-equipment.jpg",
+        }}
+        title={t("title")}
+        description={t("description")}
+        actions={<ButtonLink href="/contact">{t("button")}</ButtonLink>}
+      />
+      <GMCGetInTouch />
+    </>
   );
 }
 

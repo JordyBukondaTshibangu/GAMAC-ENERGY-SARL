@@ -5,11 +5,15 @@
     "mission": "Mission",
     "services": "Services",
     "equipe": "Team",
-    "contact": "Contact"
+    "contact": "Contact",
+    "cta": "Request a consultation",
+    "menu": "Open menu",
+    "close": "Close menu",
+    "language": "Language"
   },
   "Footer": {
     "title": "GAMAC ENERGY SARL",
-    "description": "We support our clients in sourcing specialized materials and equipment. Our expertise guarantees reliable and sustainable solutions.",
+    "description": "Energy engineering and solutions company based in Kinshasa: studies, construction and equipment supply for power, water and downstream oil.",
     "contact": {
       "title": "Contact",
       "phone_label": "Phone",
@@ -38,18 +42,23 @@
       "button": "Subscribe",
       "placeholder": "Your email address"
     },
-    "copyright": "© 2025 GAMAC ENERGY SARL. All rights reserved.",
+    "copyright": "© {year} GAMAC Energy SARL. All rights reserved.",
     "footer_bottom_links": {
       "conditions": "Terms",
       "confidentiality": "Privacy"
-    }
+    },
+    "address_text": "9, Avenue du Port, Gombe, Kinshasa, DRC",
+    "nav_title": "Navigation",
+    "services_title": "Services"
   },
   "HomePage": {
     "hero": {
-      "title": "GAMAC ENERGY SARL",
+      "title": "Together, let’s bring sustainable energy to life.",
       "title_description_1": "Together, let’s bring sustainable energy to life.",
       "description": "Each project is an opportunity to raise our standards and prove that Africa deserves the very best.",
-      "button": "GET IN TOUCH"
+      "button": "Request a consultation",
+      "secondary_button": "Explore our services",
+      "roles_label": "We operate as"
     },
     "welcome_to_gamac": {
       "title": "Welcome to GAMAC Energy",
@@ -62,7 +71,8 @@
         "metric_1": "Engineering and consulting design office",
         "metric_2": "EPC company (Engineering – Procurement – Construction)",
         "metric_3": "Supplier of specialized electrical equipment and materials"
-      }
+      },
+      "link": "Read our story"
     },
     "que_fait_gamac": {
       "title": "What we do",
@@ -97,50 +107,123 @@
       }
     },
     "partenaires": {
-      "title": "Our Partners"
+      "title": "Who we work with"
+    },
+    "facts": {
+      "founded_value": "2023",
+      "founded_label": "Founded in Kinshasa",
+      "roles_value": "3",
+      "roles_label": "licensed activities in the DRC",
+      "sectors_value": "Power, water, oil",
+      "sectors_label": "sectors we work in"
+    },
+    "value_chain": {
+      "title": "From first study to commissioning",
+      "description": "We work across the entire energy value chain, as a single point of contact from the first site survey to the final test.",
+      "steps": [
+        {
+          "title": "Studies & engineering",
+          "text": "Feasibility, grid connection, detailed design."
+        },
+        {
+          "title": "Procurement",
+          "text": "Panels, transformers, inverters, turbines, switchgear."
+        },
+        {
+          "title": "Construction & maintenance",
+          "text": "Power plants, HV/MV/LV lines, substations, boreholes."
+        },
+        {
+          "title": "Upgrades & compliance",
+          "text": "Extensions, rehabilitation, IEC and IEEE standards."
+        },
+        {
+          "title": "Supervision & control",
+          "text": "Site monitoring, quality control, HSE, testing."
+        }
+      ]
+    },
+    "services_section": {
+      "title": "Three disciplines, one partner",
+      "description": "Design office, EPC contractor and equipment supplier: we combine all three to deliver turnkey projects."
+    },
+    "why": {
+      "title": "What sets us apart",
+      "quote": "Our job is not only to supply energy, but to bring light, growth and hope.",
+      "items": [
+        {
+          "title": "A 360° approach",
+          "text": "From idea to commissioning, GAMAC is a single partner."
+        },
+        {
+          "title": "Local and global",
+          "text": "African expertise strengthened by international partnerships."
+        },
+        {
+          "title": "A culture of innovation",
+          "text": "Modern technologies adopted to anticipate future needs."
+        },
+        {
+          "title": "A lasting commitment",
+          "text": "Respect for environmental standards and creation of local value."
+        }
+      ]
     }
   },
   "GetInTouch": {
-    "title": "Get in Touch",
-    "subtitle": "Still unsure about our services?",
-    "caption": "Request a consultation.",
-    "description": "Do you have questions or want to learn more about our services? Contact us today to discuss your needs and receive tailored support.",
-    "button": "Contact us"
+    "title": "Let’s talk about your project",
+    "description": "A power plant to size, a network to upgrade, equipment to source? Tell us what you need and our team will come back to you with tailored support.",
+    "button": "Request a consultation",
+    "or": "Or call us directly"
   },
   "AboutUs": {
     "hero": {
-      "title": "ABOUT US",
+      "title": "About us",
       "title_description_1": "Green energy within everyone's reach.",
       "description": "GAMAC ENERGY was born from a strong belief: the future belongs to renewable energy. We innovate every day to make clean energy accessible and efficient. Our mission: to build a sustainable future for today's and tomorrow's generations."
     },
     "navigation": {
-      "about": "About Us",
-      "vision": "Our Vision",
-      "mot_du_dg": "A Word from the Managing Director",
-      "contact": "Get in touch"
+      "about": "Who we are",
+      "vision": "Our vision",
+      "mot_du_dg": "A word from the Managing Director",
+      "contact": "Contact us"
     },
     "historic": {
       "subtitle": "Energy for businesses",
       "title": "Products and services for long-term partnerships",
       "description_1": "Founded in March 2023 in the Democratic Republic of Congo,",
       "description_2": " GAMAC ENERGY SARL",
-      "description_3": "is much more than an engineering company: it is a driver of energy transformation. We operate at the crossroads of renewable and conventional energies, with a clear objective: to provide solutions that address today’s energy challenges in Africa and build tomorrow’s resilience. Our expertise covers the entire value chain – from design to construction, including maintenance and optimization. This integrated approach allows us to deliver concrete, measurable and sustainable results."
+      "description_3": "is much more than an engineering company: it is a driver of energy transformation. We operate at the crossroads of renewable and conventional energies, with a clear objective: to provide solutions that address today’s energy challenges in Africa and build tomorrow’s resilience. Our expertise covers the entire value chain – from design to construction, including maintenance and optimization. This integrated approach allows us to deliver concrete, measurable and sustainable results.",
+      "statement": "More than an engineering company: a driver of energy transformation."
     },
     "vision": {
-      "title": "Our Vision",
-      "description_1": "is to become a leading player and strategic partner in the energy sector in the Democratic Republic of Congo and across Africa, by providing integrated and sustainable solutions that cover the entire energy value chain. As a provider of physical works, intellectual services and specialized equipment and materials, we strive to offer high-level expertise and modern technologies to strengthen national electrical infrastructure. Our vision is also to actively contribute to improving access to reliable, safe and affordable energy for all, while supporting the economic growth and sustainable development of the DRC."
+      "title": "Our vision",
+      "lead": "To become a leading player and strategic partner in the energy sector in the Democratic Republic of Congo and across Africa.",
+      "description_1": "We provide integrated and sustainable solutions that cover the entire energy value chain. As a provider of physical works, intellectual services and specialised equipment and materials, we strive to offer high-level expertise and modern technologies to strengthen national electrical infrastructure.",
+      "description_2": "We want to actively contribute to improving access to reliable, safe and affordable energy for all, while supporting the economic growth and sustainable development of the DRC.",
+      "quote": "Each project is an opportunity to raise our standards and prove that Africa deserves the very best."
     },
     "mot_du_dg": {
-      "subtitle": "Words from the",
-      "title": "Managing Director"
+      "subtitle": "A word from the",
+      "title": "A word from the Managing Director",
+      "salutation": "Dear partners,",
+      "paragraphs": [
+        "At the heart of our country’s energy challenges, GAMAC Energy SARL was born from a deep conviction: energy is the foundation on which the Democratic Republic of Congo of tomorrow will be built. Without modern and reliable energy infrastructure, there is no industrial development, no economic competitiveness and no lasting improvement in the daily lives of our people.",
+        "We operate in a difficult context: investing in the Democratic Republic of Congo takes a great deal of courage, resilience and vision. The challenges are many – regulatory constraints, a lack of basic infrastructure, economic instability – but our determination is even greater. It is this conviction and passion that drive us every day and allow us to move forward, step by step, towards our goals.",
+        "At GAMAC Energy, we have chosen excellence as our standard. Our engineers and managers, in partnership with international experts, design and deliver energy projects that combine technical rigour, innovation and sustainability. We do not simply provide services; we build solutions that transform regions and open new prospects for our communities.",
+        "Our ambition is clear: to be a key player in Africa’s energy transition by offering solutions that are modern, competitive and adapted to local realities. We want to prove that the Democratic Republic of Congo can be a model of innovation and leadership in energy.",
+        "With courage, determination and faith in the future, we will continue to walk this path together."
+      ],
+      "name": "Tony Dino Chermani",
+      "role": "Managing Director, GAMAC Energy SARL"
     }
   },
   "Mision": {
     "hero": {
-      "title": "OUR MISSION",
+      "title": "Our mission",
       "title_description_1": "Innovation in the service of clean energy.",
       "description": "We are proud to build local solutions that contribute to the energy sovereignty of our country.",
-      "button": "GET IN TOUCH"
+      "button": "Request a consultation"
     },
     "navigation": {
       "fournir": "Provide local solutions",
@@ -150,25 +233,27 @@
     },
     "missions": [
       {
-        "title": "PROVIDING RELIABLE AND ACCESSIBLE ENERGY",
+        "title": "Providing reliable and accessible energy",
         "description": "Our first mission is to guarantee reliable, continuous and competitive energy for our clients, whether they are industrial, institutional or community-based. We design and deploy solutions tailored to local needs, combining modern technologies with field expertise. From feasibility studies to maintenance, we support every step to deliver energy that drives growth, stimulates the economy and improves quality of life for communities."
       },
       {
-        "title": "DEVELOPING LOCAL TALENT AND STRENGTHENING SKILLS",
-        "description": "Our third mission is to make every energy project an opportunity for human development. We are committed to training, employing and supporting local talent in order to build a skilled workforce proud to contribute to the energy sovereignty of the Democratic Republic of Congo and the African continent."
+        "title": "Innovating for sustainable development",
+        "description": "Our second mission is to be a responsible innovation partner, integrating into our projects solutions that promote the energy transition and reduce the carbon footprint. We believe that Africa’s future lies in infrastructure capable of combining performance, safety and sustainability. Through rural electrification, the development of renewable energies and the modernization of existing facilities, we turn each project into a lever for inclusive development across the continent."
       },
       {
-        "title": "INNOVATING FOR SUSTAINABLE DEVELOPMENT",
-        "description": "Our second mission is to be a responsible innovation partner, integrating into our projects solutions that promote the energy transition and reduce the carbon footprint. We believe that Africa’s future lies in infrastructure capable of combining performance, safety and sustainability. Through rural electrification, the development of renewable energies and the modernization of existing facilities, we turn each project into a lever for inclusive development across the continent."
+        "title": "Developing local talent and strengthening skills",
+        "description": "Our third mission is to make every energy project an opportunity for human development. We are committed to training, employing and supporting local talent in order to build a skilled workforce proud to contribute to the energy sovereignty of the Democratic Republic of Congo and the African continent."
       }
-    ]
+    ],
+    "intro": "Three commitments guide every project we take on.",
+    "label": "Mission"
   },
   "Services": {
     "hero": {
-      "title": "OUR SERVICES",
+      "title": "Our services",
       "title_description_1": "For a greener future, starting today.",
       "description": "We support our clients and partners in the successful delivery of energy projects in electricity, hydraulics and downstream oil. Our expertise covers all key stages: from design to commissioning, with end-to-end technical and strategic support.",
-      "button": "Contact us"
+      "button": "Request a consultation"
     },
     "navigation": {
       "service": "Intellectual Services",
@@ -190,99 +275,156 @@
         "description": "We assist our clients in sourcing specialized materials and equipment."
       }
     ],
-    "button": "See more"
+    "button": "See more",
+    "services_short": [
+      "From pre-feasibility to commissioning: studies, design, consulting, supervision and control.",
+      "Construction, maintenance, extension, compliance upgrades, renovation and removal of electrical, hydraulic and oil installations.",
+      "Sourcing of specialised equipment that meets international standards and suits African conditions."
+    ],
+    "highlights": [
+      [
+        "Feasibility studies",
+        "Design & engineering",
+        "Supervision & control"
+      ],
+      [
+        "Power & water",
+        "Oil & gas",
+        "Maintenance"
+      ],
+      [
+        "Solar & storage",
+        "Transformers",
+        "Turbines & pumping"
+      ]
+    ]
   },
   "ServicesIntellectuels": {
     "hero": {
-      "title": "PROVIDERS OF INTELLECTUAL SERVICES",
-      "subtitle": "For a greener future, starting now.",
-      "description": "",
-      "button": "GET IN TOUCH"
+      "title": "Intellectual services",
+      "subtitle": "Intellectual services",
+      "description": "We support our clients and partners in the successful delivery of energy projects in electricity, hydraulics and downstream oil. Our expertise covers all key stages: from design to commissioning, with end-to-end technical and strategic support.",
+      "button": "Request a consultation"
     },
     "services": [
       {
         "title": "Pre-feasibility & Feasibility Studies",
-        "items": [
-          "Pre-feasibility studies (site screening, preliminary analyses).",
-          "Technical, economic and financial feasibility studies.",
-          "Grid connection and integration studies (load flow, stability, short-circuit).",
-          "Hydrological, geotechnical and environmental studies for hydraulic projects.",
-          "Market analyses and financial modelling for downstream oil projects.",
-          "Environmental and social impact reports (EIA/ESIA)."
+        "groups": [
+          {
+            "title": "",
+            "items": [
+              "Pre-feasibility studies (site screening, preliminary analyses).",
+              "Technical, economic and financial feasibility studies.",
+              "Grid connection and integration studies (load flow, stability, short-circuit).",
+              "Hydrological, geotechnical and environmental studies for hydraulic projects.",
+              "Market analyses and financial modelling for downstream oil projects.",
+              "Environmental and social impact reports (EIA/ESIA)."
+            ]
+          }
         ]
       },
       {
         "title": "Design & Engineering",
-        "items": [
-          "Preliminary, basic and detailed design of energy infrastructure:",
-          "Power plants (hydropower, thermal, solar, hybrid).",
-          "Transmission and distribution networks (substations, HV/MV/LV lines).",
-          "Hydraulic infrastructure (dams, intake structures, penstocks, canals).",
-          "Storage and distribution facilities in downstream oil (depots, fuel stations, pipelines).",
-          "Sizing of electromechanical and civil engineering equipment.",
-          "Preparation of drawings, technical diagrams and execution files."
+        "groups": [
+          {
+            "title": "Preliminary, basic and detailed design of energy infrastructure",
+            "items": [
+              "Power plants (hydropower, thermal, solar, hybrid).",
+              "Transmission and distribution networks (substations, HV/MV/LV lines).",
+              "Hydraulic infrastructure (dams, intake structures, penstocks, canals)."
+            ]
+          },
+          {
+            "title": "",
+            "items": [
+              "Storage and distribution facilities in downstream oil (depots, fuel stations, pipelines).",
+              "Sizing of electromechanical and civil engineering equipment.",
+              "Preparation of drawings, technical diagrams and execution files."
+            ]
+          }
         ]
       },
       {
         "title": "Consulting & Technical Assistance – Supervision, Monitoring & Control",
-        "items": [
-          "Strategic consulting in planning and management of energy projects.",
-          "Support with administrative procedures (environment, safety).",
-          "Assistance in preparing tenders and bids.",
-          "Supervision and monitoring of electrical, hydromechanical and oil-related works.",
-          "Quality control of materials, equipment and on-site execution.",
-          "Verification of compliance with international norms and standards.",
-          "HSE monitoring and performance of tests, commissioning and start-up."
+        "groups": [
+          {
+            "title": "",
+            "items": [
+              "Strategic consulting in planning and management of energy projects.",
+              "Support with administrative procedures (environment, safety).",
+              "Assistance in preparing tenders and bids.",
+              "Supervision and monitoring of electrical, hydromechanical and oil-related works.",
+              "Quality control of materials, equipment and on-site execution.",
+              "Verification of compliance with international norms and standards.",
+              "HSE monitoring and performance of tests, commissioning and start-up."
+            ]
+          }
         ]
       }
     ]
   },
   "TravauxPhysique": {
     "hero": {
-      "title": "PROVIDERS OF PHYSICAL WORKS",
-      "subtitle": "For a greener future, starting now.",
-      "description": "",
-      "button": "GET IN TOUCH"
+      "title": "Physical works",
+      "subtitle": "Physical works",
+      "description": "We support our clients and partners in the successful delivery of their energy projects in electricity, hydraulics and downstream oil. Our expertise covers the entire life cycle of your energy infrastructure.",
+      "button": "Request a consultation"
     },
     "services": [
       {
-        "title": "Electricity and Hydraulics",
-        "items": [
+        "title": "Electricity and hydraulics",
+        "groups": [
           {
-            "construction": [
+            "title": "Construction",
+            "items": [
               "Solar/hydro/thermal power plants",
               "HV/MV/LV lines",
               "Substations",
               "Distribution networks and drinking water boreholes and pumping systems"
-            ],
-            "maintenance": [
+            ]
+          },
+          {
+            "title": "Maintenance",
+            "items": [
               "Preventive and corrective maintenance of solar/hydro/thermal power plants",
               "Substations",
               "Transformers",
               "Lines",
               "Electrical equipment",
               "Boreholes and pumps"
-            ],
-            "Modifications & extensions": [
+            ]
+          },
+          {
+            "title": "Modifications & extensions",
+            "items": [
               "Adaptation of existing networks",
               "Addition of new capacity",
               "Connection to the national grid (SNEL)",
               "Replacement or modernization of pumps (manual to electric/solar)",
               "Extension of the distribution network from an existing borehole",
               "Addition of extra storage systems (tanks, reservoirs)"
-            ],
-            "mise aux normes": [
+            ]
+          },
+          {
+            "title": "Compliance upgrades",
+            "items": [
               "Compliance with international standards (IEC, IEEE)",
               "Local requirements (ARE, MRHE)",
               "Compliance with national and international standards (WHO, ISO, health standards)",
               "Installation of water quality monitoring systems"
-            ],
-            "rénovation": [
+            ]
+          },
+          {
+            "title": "Renovation",
+            "items": [
               "Rehabilitation of ageing power plants, substations and networks",
               "Rehabilitation of old or abandoned boreholes",
               "Restoration of pumping and distribution systems"
-            ],
-            "dépose": [
+            ]
+          },
+          {
+            "title": "Removal",
+            "items": [
               "Safe dismantling of old lines",
               "Substations",
               "Out-of-service pumping equipment or non-functional equipment",
@@ -292,25 +434,30 @@
         ]
       },
       {
-        "title": "Oil & Gas",
-        "items": [
-          "Construction and maintenance of oil depots compliant with international standards.",
-          "Deployment and management of pipelines with advanced monitoring systems.",
-          "Integration of automation solutions for safety and efficiency.",
-          "Development of innovative, flexible and cost-effective micro-modular refineries."
+        "title": "Oil & gas",
+        "groups": [
+          {
+            "title": "",
+            "items": [
+              "Construction and maintenance of oil depots compliant with international standards.",
+              "Deployment and management of pipelines with advanced monitoring systems.",
+              "Integration of automation solutions for safety and efficiency.",
+              "Development of innovative, flexible and cost-effective micro-modular refineries."
+            ]
+          }
         ]
       }
     ]
   },
   "Fournisseurs": {
     "hero": {
-      "title": "SUPPLIERS OF ELECTRICAL EQUIPMENT",
-      "subtitle": "For a greener future, starting now.",
-      "description": "",
-      "button": "GET IN TOUCH"
+      "title": "Electrical equipment supply",
+      "subtitle": "Equipment",
+      "description": "GAMAC Energy relies on an international network of partners to supply specialized equipment that meets international standards and is adapted to African conditions.",
+      "button": "Request a consultation"
     },
     "Section": {
-      "title": "Supply of Specialized Equipment",
+      "title": "Supply of specialised equipment",
       "description": "GAMAC Energy relies on an international network of partners to supply specialized equipment that meets international standards and is adapted to African conditions.",
       "items": [
         "Solar panels and batteries",
@@ -322,83 +469,90 @@
         "Hydropower turbines",
         "Pumping systems and hydraulic equipment"
       ]
-    }
+    },
+    "gallery": [
+      "Solar panels",
+      "Inverters, alternators, regulators",
+      "High-voltage lines and substations",
+      "Turbines",
+      "Industrial electric furnaces",
+      "Large drinking-water plants"
+    ],
+    "catalogue_title": "What we supply"
   },
   "Team": {
     "hero": {
-      "title": "OUR TEAM",
+      "title": "Our team",
       "title_description_1": "Reinventing energy, preserving the planet.",
       "description": "Our team brings together passionate people committed to a sustainable future. Together, we design clean energy solutions that are innovative and accessible to all. Guided by a shared vision, we transform today’s energy to preserve that of tomorrow.",
-      "button": "See more about us"
+      "button": "Learn more about us"
     },
     "team": {
-      "subtitle": "Together, let’s make a green future shine.",
-      "title": "OUR TEAM",
-      "description_1": "Our team",
-      "description_2": " GAMAC ENERGY SARL",
-      "description_3": "is made up of experienced professionals from diverse backgrounds, united by shared values, a common vision and the desire to build a better future for our country and all who live in it. Driven by a constant quest for excellence, we place agility and results at the heart of our actions. Guided by an entrepreneurial mindset, we act with integrity and rigour to ensure exemplary governance in each of our roles. If you would like to join our journey, please contact us at: 📧 info@gamac-energy.com for more information on our recruitment process."
+      "title": "Professionals united by a shared vision",
+      "description": "Our team is made up of experienced professionals from diverse backgrounds, united by shared values, a common vision and the desire to build a better future for our country and all who live in it. Driven by a constant quest for excellence, we place agility and results at the heart of our actions. Guided by an entrepreneurial mindset, we act with integrity and rigour to ensure exemplary governance in each of our roles.",
+      "join_title": "Join the journey",
+      "join_text": "Would you like to join GAMAC Energy? Write to us to learn more about our recruitment process.",
+      "join_email": "info@gamac-energy.com"
     },
     "members": [
       {
-        "name: ": "Tony DINO CHERMANI",
-        "role": "MANAGING DIRECTOR",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem molestias perferendis quis odit totam reiciendis veniam culpa placeat nemo in dicta modi nesciunt nam et, dolor, tenetur architecto vel tempore."
+        "name": "Tony Dino Chermani",
+        "role": "Managing Director"
       },
       {
-        "name: ": "Renelle TSHIBANGU",
-        "role": "COORDINATOR",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem molestias perferendis quis odit totam reiciendis veniam culpa placeat nemo in dicta modi nesciunt nam et, dolor, tenetur architecto vel tempore."
+        "name": "Renelle Tshibangu",
+        "role": "Administrative Coordinator"
       },
       {
-        "name: ": "Rhamia CHAKOPO",
-        "role": "TECHNICAL COORDINATOR",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem molestias perferendis quis odit totam reiciendis veniam culpa placeat nemo in dicta modi nesciunt nam et, dolor, tenetur architecto vel tempore."
+        "name": "Rhamia Chakopo",
+        "role": "Technical Coordinator"
       },
       {
-        "name: ": "Theoda TSHIBANGU",
-        "role": "Project Engineer",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem molestias perferendis quis odit totam reiciendis veniam culpa placeat nemo in dicta modi nesciunt nam et, dolor, tenetur architecto vel tempore."
+        "name": "Theoda Tshibangu",
+        "role": "Project Engineer"
       },
       {
-        "name: ": "JOHN MFUTA",
-        "role": "Business Intelligence & Business Developer",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem molestias perferendis quis odit totam reiciendis veniam culpa placeat nemo in dicta modi nesciunt nam et, dolor, tenetur architecto vel tempore."
+        "name": "John Mfuta",
+        "role": "Business Intelligence & Business Development"
       },
       {
         "name": "Aline Makambo",
-        "role": "Administrative Manager and IT Manager",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem molestias perferendis quis odit totam reiciendis veniam culpa placeat nemo in dicta modi nesciunt nam et, dolor, tenetur architecto vel tempore."
+        "role": "Administrative & IT Manager"
       }
     ]
   },
   "Contact": {
     "hero": {
-      "subtitle": "TOGETHER, LET’S MAKE A GREEN FUTURE SHINE.",
-      "title": "CONTACT US",
+      "subtitle": "Together, let’s make a green future shine.",
+      "title": "Contact us",
       "description": "Do you have a question, a project or an idea to share? Our team is here to support you in your energy initiatives. Together, let’s bring sustainable and responsible solutions to life."
     },
     "form_section": {
-      "subtitle": "SEND US A MESSAGE",
-      "title": "Get in Touch with Us",
-      "button_select_request": "Select your request"
+      "title": "Send us a message",
+      "description": "Pick the type of request, then describe what you need. We will get back to you quickly.",
+      "request_label": "Type of request",
+      "info_title": "Our details",
+      "map_title": "Find us",
+      "address_hint": "Landmark: Forescom roundabout",
+      "sent": "Your email app has opened with your request pre-filled. Send the email to pass it on to us.",
+      "consent": "I agree that GAMAC Energy may use this information to respond to my request.",
+      "counter": "{count}/300 characters"
     },
     "bottom_form": {
-      "title": "OUR ACTIVITIES",
       "placeholders": {
-        "first_name": "Enter your first name",
-        "last_name": "Enter your last name",
-        "email": "Enter your email address",
-        "phone": "Enter your phone number",
-        "message": "Enter your message"
+        "first_name": "Jean",
+        "last_name": "Mukendi",
+        "email": "name@company.com",
+        "phone": "+243 …",
+        "message": "Describe your project or request"
       },
       "labels": {
-        "first_name": "Your First Name *",
-        "last_name": "Your Last Name *",
-        "email": "Your Email *",
-        "phone": "Your Phone",
-        "message": "Message *"
+        "first_name": "First name",
+        "last_name": "Last name",
+        "email": "Email",
+        "phone": "Phone (optional)",
+        "message": "Message"
       },
-      "privacy_text": "Your data will be processed according to our privacy policy.",
       "button_submit": "Send my request"
     },
     "request_types": {
@@ -778,5 +932,19 @@
         ]
       }
     }
+  },
+  "Common": {
+    "company": "GAMAC Energy SARL",
+    "tagline": "Energy engineering and solutions",
+    "all_services": "All services",
+    "learn_more": "See the details",
+    "contact_us": "Contact us",
+    "home": "Home"
+  },
+  "Projects": {
+    "title": "Our projects",
+    "subtitle": "Projects",
+    "description": "We support our clients and partners in delivering their energy projects in electricity, hydraulics and downstream oil.",
+    "button": "Request a consultation"
   }
 }

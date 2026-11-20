@@ -3,33 +3,40 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-function GMCMotDuDG() {
+function GMCMotDuDG({ id }: { id?: string }) {
   const t = useTranslations("AboutUs.mot_du_dg");
+  const paragraphs = t.raw("paragraphs") as string[];
 
   return (
-    <section className="w-full mx-auto py-20 px-4 sm:px-6 lg:px-8 bg-[#a02c0f]">
-      <div className="max-w-7xl mx-auto py-28">
-        <h2 className="w-full flex flex-col gap-6 text-5xl mb-16 text-white">
-          <span>{t("subtitle")}</span>
-          <span className="font-bold uppercase">{t("title")}</span>
-        </h2>
-
-        <div className="flex flex-col lg:flex-row gap-10 justify-between items-center">
-          <Image
-            src="/assets/images/mot-du-dg.png"
-            alt="GAMAC ENERGY SARL"
-            width={800}
-            height={600}
-          />
-
-          <Image
-            src="/assets/images/dg.png"
-            alt="GAMAC ENERGY SARL"
-            width={800}
-            height={600}
-            className="lg:hidden xl:block"
-          />
+    <section id={id} className="py-24 md:py-32">
+      <div className="container-x grid gap-12 lg:grid-cols-12 lg:gap-20">
+        <div className="lg:col-span-5">
+          <div className="lg:sticky lg:top-[calc(var(--header-h)+5rem)]">
+            <div className="relative aspect-[4/5] w-full max-w-[28rem] overflow-hidden bg-paper">
+              <Image
+                src="/assets/images/dg.png"
+                alt={t("name")}
+                fill
+                sizes="(min-width: 1024px) 34vw, 90vw"
+                className="object-cover object-top"
+              />
+            </div>
+          </div>
         </div>
+
+        <article className="lg:col-span-7">
+          <h2 className="display text-[clamp(2rem,3.6vw,3rem)] text-ink">{t("title")}</h2>
+          <div className="prose-measure mt-10 space-y-6 text-[18px] leading-[1.75] text-text/85">
+            <p className="font-semibold text-ink">{t("salutation")}</p>
+            {paragraphs.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </div>
+          <div className="mt-10 border-t border-line pt-6">
+            <p className="heading text-[20px] text-ink">{t("name")}</p>
+            <p className="text-[15px] text-muted">{t("role")}</p>
+          </div>
+        </article>
       </div>
     </section>
   );

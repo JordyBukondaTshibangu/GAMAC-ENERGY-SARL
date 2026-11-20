@@ -1,62 +1,33 @@
 "use client";
 
-import * as motion from "motion/react-client";
-
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
+const partners = [
+  { image: "/assets/images/partenaires/geosigmoid-group.png", name: "Geosigmoid Group" },
+  { image: "/assets/images/partenaires/Geoscan-soft.png", name: "Geoscan Soft" },
+];
+
 function GMCOurPartners() {
   const t = useTranslations("HomePage.partenaires");
-  const partners = [
-    {
-      image: "/assets/images/partenaires/geosigmoid-group.png",
-      name: "Geosigmoid Group",
-      alt: "Geosigmoid Group",
-    },
-    {
-      image: "/assets/images/partenaires/Geoscan-soft.png",
-      name: "Geoscan Soft",
-      alt: "Geoscan Soft",
-    },
-    {
-      image: "/assets/images/partenaires/gamac-energy.png",
-      name: "Gamac Energy",
-      alt: "Gamac Energy",
-    },
-  ];
 
   return (
-    <section className="w-full lg:mx-auto flex flex-col gap-8 px-5 py-10 lg:py-20">
-      <div className="lg:max-w-7xl w-full lg:mx-auto flex flex-col gap-20">
-        <h2 className="w-full lg:w-1/3 h-full flex flex-col gap-20 text-3xl leading-12 uppercase font-bold">
-          {t("title")}
-        </h2>
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex h-full  flex-col md:grid md:grid-cols-3 gap-14 md:gap-10 overflow-auto flex-nowrap"
-        >
-          {partners.map((partner, index) => (
-            <div
-              key={index}
-              className="flex flex-col justify-center items-center gap-20"
-            >
+    <section className="border-y border-line bg-paper">
+      <div className="container-x flex flex-col gap-8 py-12 md:flex-row md:items-center md:justify-between">
+        <h2 className="heading text-[22px] text-ink">{t("title")}</h2>
+        <ul className="flex flex-wrap items-center gap-x-14 gap-y-6">
+          {partners.map((p) => (
+            <li key={p.name} className="bg-white px-6 py-4">
               <Image
-                src={partner?.image}
-                alt={partner?.alt}
-                className="w-full h-full object-contain"
-                width={500}
-                height={500}
+                src={p.image}
+                alt={p.name}
+                width={200}
+                height={100}
+                className="h-14 w-auto object-contain grayscale transition duration-300 hover:grayscale-0"
               />
-              <h4 className="text-2xl font-semibold uppercase text-[#1e2236] tracking-widest">
-                {partner?.name}
-              </h4>
-              <hr className="w-20 border-t-2 border-amber-500 md:hidden" />
-            </div>
+            </li>
           ))}
-        </motion.div>
+        </ul>
       </div>
     </section>
   );

@@ -1,22 +1,30 @@
-import HeroImage from "@/components/common/gmc-hero-image";
+"use client";
+
+import { useTranslations } from "next-intl";
+
+import { ButtonLink } from "@/components/atoms/button";
+import GMCGetInTouch from "@/components/common/gmc-get-in-touch";
+import PageHero from "@/components/common/page-hero";
 import GMCMaterialsList from "@/components/molecules/services/gmc-materials-list";
 import GMCSpecializedEquipment from "@/components/molecules/services/gmc-special-equipment-lit";
 
-export default function GMCSPhysicalService() {
-  return (
-    <div className="w-full flex flex-col gap-20">
-      <HeroImage
-        title="FOURNISSEURS D'EQUIPEMENTS ÉLECTRIQUES"
-        image="/assets/images/solar-panels.jpg"
-        subtitle="Pour un futur plus vert, dès maintenant."
-        description=""
-        buttonText="ENTREZ EN CONTACT"
-        buttonLink="/contact"
-        overlayOpacity={0.7}
-      />
+export default function GMCEquipmentSupply() {
+  const t = useTranslations("Fournisseurs.hero");
+  const services = useTranslations("Services");
+  const common = useTranslations("Common");
 
+  return (
+    <>
+      <PageHero
+        media={{ type: "image", src: "/assets/images/solar-equipment.jpg" }}
+        breadcrumb={{ label: common("all_services"), href: "/services" }}
+        title={t("title")}
+        description={services("services.2.description")}
+        actions={<ButtonLink href="/contact">{t("button")}</ButtonLink>}
+      />
       <GMCMaterialsList />
       <GMCSpecializedEquipment />
-    </div>
+      <GMCGetInTouch />
+    </>
   );
 }

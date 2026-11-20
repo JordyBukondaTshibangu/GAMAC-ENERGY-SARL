@@ -1,30 +1,15 @@
-export const equipmentAndMaterials = [
-  {
-    title: "Turbines",
-    image: "/assets/images/turbines.jpg",
-  },
-  {
-    title: "Panneaux solaires",
-    image: "/assets/images/solar-panels.jpg",
-  },
-  {
-    title: "Onduleurs, alternateurs, régulateurs",
-    image: "/assets/images/invertor.jpg",
-  },
-  {
-    title: "Lignes et postes électriques à haute tension",
-    image: "/assets/images/high-voltage-substation.jpg",
-  },
-  {
-    title: "Fours électriques industriels",
-    image: "/assets/images/furnaces.png",
-  },
-  {
-    title: "Usines d’eau de consommation de grande taille",
-    image: "/assets/images/usine-grande-taille.png",
-  },
-  {
-    title: "Et autres",
-    image: "/assets/images/materials.jpg",
-  },
+/** Images for the equipment gallery, in the same order as Fournisseurs.gallery in messages. */
+export const equipmentImages = [
+  "/assets/images/solar-panels.jpg",
+  "/assets/images/invertor.jpg",
+  "/assets/images/high-voltage-substation.jpg",
+  "/assets/images/turbines.jpg",
+  "/assets/images/furnaces.png",
+  "/assets/images/usine-grande-taille.png",
 ];
+
+/** Product shots on white need to be shown whole rather than cropped. */
+export const containImages = new Set([
+  "/assets/images/invertor.jpg",
+  "/assets/images/furnaces.png",
+]);

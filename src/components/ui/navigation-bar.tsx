@@ -1,175 +1,227 @@
 "use client";
 
+import { ButtonLink } from "@/components/atoms/button";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
+import { navLinks } from "@/utils/site";
 import { Menu, X } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import { useState, useTransition } from "react";
+import { useEffect, useState, useTransition } from "react";
+
+const locales = [
+  { code: "fr", label: "FR", name: "Français" },
+  { code: "en", label: "EN", name: "English" },
+] as const;
+
+function isActive(pathname: string, href: string) {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
+export function Logo({ className = "" }: { className?: string }) {
+  return (
+    <span className={`flex items-center gap-2.5 ${className}`}>
+      <Image
+        src="/logo-mark.png"
+        alt=""
+        width={30}
+        height={33}
+        priority
+        className="h-8 w-auto"
+      />
+      <span className="heading text-[19px] leading-none text-white">
+        GAMAC <span className="font-normal text-white/75">Energy</span>
+      </span>
+    </span>
+  );
+}
+
+function LocaleSwitch({
+  size = "sm",
+  locale,
+  label,
+  disabled,
+  onSwitch,
+}: {
+  size?: "sm" | "lg";
+  locale: string;
+  label: string;
+  disabled: boolean;
+  onSwitch: (code: string) => void;
+}) {
+  return (
+    <div
+      role="group"
+      aria-label={label}
+      className={`flex items-center ${size === "lg" ? "gap-3 text-lg" : "gap-1 text-[13px]"}`}
+    >
+      {locales.map((l, i) => (
+        <span key={l.code} className="flex items-center gap-1">
+          {i > 0 && (
+            <span className="text-white/30" aria-hidden>
+              /
+            </span>
+          )}
+          <button
+            type="button"
+            onClick={() => onSwitch(l.code)}
+            disabled={disabled}
+            aria-pressed={locale === l.code}
+            title={l.name}
+            className={`cursor-pointer px-1 font-semibold transition-colors ${
+              locale === l.code
+                ? "text-white"
+                : "text-white/50 hover:text-white"
+            }`}
+          >
+            {l.label}
+          </button>
+        </span>
+      ))}
+    </div>
+  );
+}
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [isPending, startTransition] = useTransition();
-
-  const toggleMenu = () => setMenuOpen(!menuOpen);
 
   const t = useTranslations("Navigation");
   const router = useRouter();
   const locale = useLocale();
   const pathname = usePathname();
 
-  const locales = [
-    { code: "fr", label: "Français" },
-    { code: "en", label: "English" },
-  ];
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const nextLocale = e.target.value;
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
+  const switchLocale = (next: string) => {
+    if (next === locale) return;
     startTransition(() => {
-      router.replace(pathname, { locale: nextLocale });
+      router.replace(pathname, { locale: next });
     });
   };
 
-  const navLinksLeft = [
-    { label: t("home"), href: "/" },
-    { label: t("about"), href: "/about" },
-    { label: t("mission"), href: "/mission" },
-  ];
-
-  const navLinksRight = [
-    { label: t("services"), href: "/services" },
-    { label: t("equipe"), href: "/team" },
-    { label: t("contact"), href: "/contact" },
-  ];
-
   return (
-    <header className="w-full bg-[#F4F4F4] border-b border-[#E5E7EB] shadow-sm fixed top-0 z-50 transition-all duration-300">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-4">
-        {/* Left nav (desktop) */}
-        <nav className="hidden md:flex space-x-8 text-[#1B1B1B] font-medium">
-          {navLinksLeft.map(({ label, href }) => (
-            <Link
-              key={href}
-              href={href}
-              className="relative uppercase tracking-wide text-sm font-semibold cursor-pointer group"
-            >
-              <span className="transition-colors duration-300 group-hover:text-[#B71C1C]">
-                {label}
-              </span>
-              <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#B71C1C] transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-          ))}
-        </nav>
-
-        {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2">
-          <Image
-            src="/logo.png"
-            alt="GAMAC Energy"
-            width={120}
-            height={40}
-            priority
-            className="transition-transform duration-500 hover:scale-105"
-          />
-        </Link>
-
-        {/* Right nav (desktop) */}
-        <nav className="hidden md:flex space-x-8 text-[#1B1B1B] font-medium">
-          {navLinksRight.map(({ label, href }) => (
-            <Link
-              key={href}
-              href={href}
-              className="relative uppercase tracking-wide text-sm font-semibold cursor-pointer group"
-            >
-              <span className="transition-colors duration-300 group-hover:text-[#B71C1C]">
-                {label}
-              </span>
-              <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#B71C1C] transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-          ))}
-        </nav>
-
-        {/* Locale switcher (desktop) */}
-        <div className="hidden md:block">
-          <select
-            value={locale}
-            onChange={handleChange}
-            disabled={isPending}
-            className="border border-[#B71C1C] rounded-md px-3 py-1 text-sm text-[#1B1B1B] bg-white shadow-sm hover:shadow-md transition"
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow] duration-300 ${
+          scrolled || menuOpen
+            ? "bg-ink-deep/95 shadow-[0_1px_0_rgba(255,255,255,0.08)] backdrop-blur"
+            : "bg-gradient-to-b from-ink-deep/70 to-transparent"
+        }`}
+      >
+        <div className="container-x flex h-[var(--header-h)] items-center justify-between gap-6">
+          <Link
+            href="/"
+            aria-label="GAMAC Energy"
+            onClick={() => setMenuOpen(false)}
           >
-            {locales.map((lang) => (
-              <option key={lang.code} value={lang.code}>
-                {lang.label}
-              </option>
-            ))}
-          </select>
-        </div>
+            <Logo />
+          </Link>
 
-        {/* Mobile menu button */}
-        <button
-          className="md:hidden text-[#1B1B1B] transition-transform duration-300 hover:scale-110"
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          {menuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
-      </div>
+          <nav aria-label="Principal" className="hidden lg:block">
+            <ul className="flex items-center gap-7">
+              {navLinks.map(({ key, href }) => {
+                const active = isActive(pathname, href);
+                return (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      aria-current={active ? "page" : undefined}
+                      className={`relative py-2 text-[15px] font-medium transition-colors ${
+                        active ? "text-white" : "text-white/70 hover:text-white"
+                      }`}
+                    >
+                      {t(key)}
+                      {active && (
+                        <span className="energy-gradient absolute -bottom-0.5 left-0 h-[2px] w-full" />
+                      )}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
 
-      {/* Mobile menu */}
-      {menuOpen && (
-        <div className="md:hidden fixed top-0 left-0 w-full min-h-screen bg-white z-50 animate-fadeIn flex flex-col">
-          {/* Header */}
-          <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200">
-            <div className="font-semibold text-lg text-[#1B1B1B]">
-              <span className="text-[#a02c0f]">Gamac</span> Energy
-            </div>
-            <button onClick={() => setMenuOpen(false)} className="p-2">
-              <X className="w-6 h-6 text-[#1B1B1B]" />
-            </button>
+          <div className="hidden items-center gap-6 lg:flex">
+            <LocaleSwitch
+              locale={locale}
+              label={t("language")}
+              disabled={isPending}
+              onSwitch={switchLocale}
+            />
+            <ButtonLink href="/contact" className="h-10 px-5 text-[14px]">
+              {t("cta")}
+            </ButtonLink>
           </div>
 
-          {/* Navigation Links */}
-          <nav className="flex flex-col px-6 py-6 space-y-2 font-medium text-[#1B1B1B]">
-            {[...navLinksLeft, ...navLinksRight].map((link, index) => (
-              <div key={link.href}>
-                {(index === 2 || index === 4) && (
-                  <hr className="border-gray-200 mb-2" />
-                )}
-                <Link
-                  href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="flex items-center justify-between py-3 text-base hover:text-[#a02c0f] transition-colors"
-                >
-                  <span>{link.label}</span>
-                  <span className="text-gray-400">{">"}</span>
-                </Link>
-              </div>
-            ))}
-
-            <hr className="border-gray-200 mt-2 mb-4" />
-
-            {/* Locale switcher (mobile) */}
-            <div className="flex justify-start items-center gap-2">
-              <select
-                value={locale}
-                onChange={(e) => {
-                  handleChange(e);
-                  setMenuOpen(false);
-                }}
-                disabled={isPending}
-                className="border border-[#B71C1C] rounded-md px-3 py-2 text-sm text-[#1B1B1B] bg-white shadow-sm hover:shadow-md transition"
-              >
-                {locales.map((lang) => (
-                  <option key={lang.code} value={lang.code}>
-                    {lang.label}
-                  </option>
-                ))}
-              </select>
-            </div>
+          <button
+            className="-mr-2 p-2 text-white lg:hidden"
+            onClick={() => setMenuOpen((o) => !o)}
+            aria-label={menuOpen ? t("close") : t("menu")}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+          >
+            {menuOpen ? <X size={26} /> : <Menu size={26} />}
+          </button>
+        </div>
+      </header>
+      {menuOpen && (
+        <div
+          id="mobile-menu"
+          className="fixed inset-x-0 bottom-0 top-[var(--header-h)] z-40 flex flex-col overflow-y-auto bg-ink-deep px-6 pb-10 pt-6 lg:hidden"
+        >
+          <nav aria-label="Mobile">
+            <ul className="flex flex-col">
+              {navLinks.map(({ key, href }) => {
+                const active = isActive(pathname, href);
+                return (
+                  <li key={href} className="border-b border-white/10">
+                    <Link
+                      href={href}
+                      onClick={() => setMenuOpen(false)}
+                      aria-current={active ? "page" : undefined}
+                      className={`heading flex items-center gap-3 py-4 text-[28px] ${
+                        active ? "text-white" : "text-white/70"
+                      }`}
+                    >
+                      {active && (
+                        <span className="energy-gradient h-2 w-2 rounded-full" />
+                      )}
+                      {t(key)}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
           </nav>
+          <div className="mt-auto flex flex-col gap-6 pt-10">
+            <LocaleSwitch
+              size="lg"
+              locale={locale}
+              label={t("language")}
+              disabled={isPending}
+              onSwitch={switchLocale}
+            />
+            <ButtonLink href="/contact" className="w-full">
+              {t("cta")}
+            </ButtonLink>
+          </div>
         </div>
       )}
-    </header>
+    </>
   );
 };
 

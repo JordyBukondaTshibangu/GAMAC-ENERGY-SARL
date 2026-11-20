@@ -2,38 +2,28 @@
 
 import { useTranslations } from "next-intl";
 
-import HeroImage from "@/components/common/gmc-hero-image";
-import GMCServiceList from "@/components/molecules/services/gmc-service-list";
+import { ButtonLink } from "@/components/atoms/button";
+import GMCGetInTouch from "@/components/common/gmc-get-in-touch";
+import PageHero from "@/components/common/page-hero";
+import GMCServiceList, {
+  type ServiceCategory,
+} from "@/components/molecules/services/gmc-service-list";
 
 export default function GMCSIntellectualService() {
-  const tHero = useTranslations("ServicesIntellectuels.hero");
-  const tServices = useTranslations("ServicesIntellectuels");
-
-  // services: [{ title: string; items: string[] }]
-  const services = tServices.raw("services") as {
-    title: string;
-    items: string[];
-  }[];
-
-  // Adapt to GMCServiceList props: { category, items }
-  const cases = services.map((service) => ({
-    category: service.title,
-    items: service.items,
-  }));
+  const t = useTranslations("ServicesIntellectuels");
+  const common = useTranslations("Common");
 
   return (
-    <div className="w-full flex flex-col gap-20">
-      <HeroImage
-        title={tHero("title")}
-        image="/assets/images/mission-2.jpg"
-        subtitle={tHero("subtitle")}
-        description={tHero("description")}
-        buttonText={tHero("button")}
-        buttonLink="/contact"
-        overlayOpacity={0.7}
+    <>
+      <PageHero
+        media={{ type: "image", src: "/assets/images/manual-service.jpg" }}
+        breadcrumb={{ label: common("all_services"), href: "/services" }}
+        title={t("hero.title")}
+        description={t("hero.description")}
+        actions={<ButtonLink href="/contact">{t("hero.button")}</ButtonLink>}
       />
-
-      <GMCServiceList cases={cases} />
-    </div>
+      <GMCServiceList categories={t.raw("services") as ServiceCategory[]} />
+      <GMCGetInTouch />
+    </>
   );
 }

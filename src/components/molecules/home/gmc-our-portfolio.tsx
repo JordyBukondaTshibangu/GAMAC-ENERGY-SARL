@@ -1,54 +1,89 @@
 "use client";
 
+import { Link } from "@/i18n/navigation";
+import { serviceLinks } from "@/utils/site";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
+
+export const serviceImages = [
+  "/assets/images/manual-service.jpg",
+  "/assets/images/solar-panels.jpg",
+  "/assets/images/solar-equipment.jpg",
+];
 
 function GMCOurPortfolio() {
-  const t = useTranslations("HomePage.portfolio");
+  const t = useTranslations("HomePage.services_section");
+  const s = useTranslations("Services");
+  const common = useTranslations("Common");
 
-  const portfolio = [
-    {
-      image: "/assets/images/mission-1.jpg",
-      title: t("case_1.title"),
-      description: t("case_1.description"),
-    },
-    {
-      image: "/assets/images/mission-2.jpg",
-      title: t("case_2.title"),
-      description: t("case_2.description"),
-    },
-    {
-      image: "/assets/images/mission-3.jpg",
-      title: t("case_3.title"),
-      description: t("case_3.description"),
-    },
-  ];
+  const items = serviceLinks.map(({ index, href }) => ({
+    href,
+    image: serviceImages[index],
+    title: s(`services.${index}.title`),
+    text: s(`services_short.${index}`),
+  }));
+
+  const [feature, ...rest] = items;
 
   return (
-    <section className="max-w-7xl mx-auto py-10 lg:py-20 px-4 sm:px-6 lg:px-8 flex flex-col gap-14">
-      <h2 className="w-full lg:w-1/3 h-full flex flex-col gap-20 text-3xl leading-12 uppercase font-bold">
-        {t("title")}
-      </h2>
+    <section className="bg-paper py-24 md:py-32">
+      <div className="container-x">
+        <div className="grid gap-6 md:grid-cols-2 md:items-end">
+          <h2 className="display text-[clamp(2.1rem,4.4vw,3.6rem)] text-ink">{t("title")}</h2>
+          <p className="max-w-[32rem] text-[18px] leading-relaxed text-muted md:justify-self-end">
+            {t("description")}
+          </p>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 lg:gap-10">
-        {portfolio.map(({ image, title, description }, index) => (
-          <div key={index} className="flex flex-col gap-8 lg:items-center">
-            <Image width={800} height={600} alt={title} src={image} />
-            <h4 className="text-xl font-medium leading-8 lg:leading-10 text-[#B71C1C] lg:text-xl lg:text-center lg:h-14">
-              {title}
-            </h4>
-            <p className="text-lg leading-8 lg:leading-10 font-normal lg:text-center lg:h-32">
-              {description}
+        <div className="mt-14 grid gap-8 lg:grid-cols-12 lg:gap-10">
+          {/* Lead service: large */}
+          <Link href={feature.href} className="group lg:col-span-7">
+            <div className="relative aspect-[16/11] overflow-hidden bg-line">
+              <Image
+                src={feature.image}
+                alt=""
+                fill
+                sizes="(min-width: 1024px) 58vw, 100vw"
+                className="object-cover transition-transform duration-700 ease-out-soft group-hover:scale-[1.03]"
+              />
+            </div>
+            <h3 className="heading mt-6 text-[28px] text-ink">{feature.title}</h3>
+            <p className="mt-3 max-w-[36rem] text-[17px] leading-relaxed text-muted">
+              {feature.text}
             </p>
-            <Link
-              href="/services"
-              className="w-full lg:w-64 bg-[#B71C1C] hover:bg-[#D32F2F] cursor-pointer text-white flex items-center justify-center rounded-md font-medium transition-all text-xl h-14 duration-300"
-            >
-              {t("button")}
-            </Link>
+            <span className="mt-5 inline-block text-[15px] font-semibold text-ink underline decoration-flame decoration-2 underline-offset-[6px] group-hover:text-flame">
+              {common("learn_more")}
+            </span>
+          </Link>
+
+          {/* The other two: stacked */}
+          <div className="flex flex-col gap-8 lg:col-span-5 lg:gap-10">
+            {rest.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="group grid grid-cols-[minmax(0,2fr)_minmax(0,3fr)] gap-5 border-t border-ink/15 pt-8 lg:grid-cols-1 lg:border-t-0 lg:pt-0"
+              >
+                <div className="relative aspect-[4/3] overflow-hidden bg-line lg:aspect-[16/8]">
+                  <Image
+                    src={item.image}
+                    alt=""
+                    fill
+                    sizes="(min-width: 1024px) 40vw, 40vw"
+                    className="object-cover transition-transform duration-700 ease-out-soft group-hover:scale-[1.03]"
+                  />
+                </div>
+                <div>
+                  <h3 className="heading text-[21px] text-ink lg:text-[23px]">{item.title}</h3>
+                  <p className="mt-2 text-[15px] leading-relaxed text-muted">{item.text}</p>
+                  <span className="mt-3 inline-block text-[15px] font-semibold text-ink underline decoration-flame decoration-2 underline-offset-[6px] group-hover:text-flame">
+                    {common("learn_more")}
+                  </span>
+                </div>
+              </Link>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </section>
   );

@@ -1,30 +1,51 @@
-import { CheckIcon } from "lucide-react";
+type Group = { title: string; items: string[] };
+export type ServiceCategory = { title: string; groups: Group[] };
 
-function GMCServiceList({
-  cases,
-}: {
-  cases: { category: string; items: string[] }[];
-}) {
+function ItemList({ items }: { items: string[] }) {
   return (
-    <section className="max-w-7xl w-full mx-auto py:10 pb-20 px-4 sm:px-6 lg:px-8 flex flex-col gap-20">
-      {cases.map((item, index) => (
-        <div key={index} className="w-full flex flex-col gap-10">
-          <h4 className="text-3xl font-medium leading-10 is-style-underlined-heading">
-            {item.category}
-          </h4>
-          <ul className="flex flex-col gap-4 px-5">
-            {item.items.map((item, index) => (
-              <li
-                key={index}
-                className="text-lg leading-10 font-normal flex items-center gap-2"
-              >
-                <CheckIcon size={24} className="text-amber-500 min-w-10" />
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
+    <ul className="divide-y divide-line">
+      {items.map((item) => (
+        <li key={item} className="flex gap-4 py-3.5 text-[17px] leading-relaxed text-text/85">
+          <span className="mt-[0.7em] h-[2px] w-3 shrink-0 bg-flame" aria-hidden />
+          <span>{item}</span>
+        </li>
       ))}
+    </ul>
+  );
+}
+
+/** Detailed scope of a service: category title on the left, scope on the right. */
+function GMCServiceList({ categories }: { categories: ServiceCategory[] }) {
+  return (
+    <section className="py-20 md:py-28">
+      <div className="container-x flex flex-col gap-20 md:gap-28">
+        {categories.map((cat) => {
+          const subdivided = cat.groups.filter((g) => g.title).length > 1;
+          return (
+            <div key={cat.title} className="grid gap-8 lg:grid-cols-12 lg:gap-16">
+              <div className="lg:col-span-4">
+                <h2 className="heading border-t-2 border-ink pt-5 text-[28px] text-ink lg:sticky lg:top-[calc(var(--header-h)+2rem)]">
+                  {cat.title}
+                </h2>
+              </div>
+              <div
+                className={`lg:col-span-8 ${
+                  subdivided ? "grid gap-x-12 gap-y-10 md:grid-cols-2" : "flex flex-col gap-8"
+                }`}
+              >
+                {cat.groups.map((g, i) => (
+                  <div key={g.title || i}>
+                    {g.title && (
+                      <h3 className="heading mb-2 text-[19px] text-ink">{g.title}</h3>
+                    )}
+                    <ItemList items={g.items} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 }

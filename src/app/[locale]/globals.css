@@ -1,34 +1,130 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+  GAMAC Energy — design tokens
+  ink    : grid navy, the dark base of heroes, nav and footer
+  paper  : cool off-white for light sections
+  flame  : brand red from the logo, used for actions
+  ember / sun : the rest of the flame, reserved for the energy line
+*/
+@theme {
+  --color-ink: #0a2238;
+  --color-ink-deep: #061626;
+  --color-ink-soft: #16324d;
+  --color-paper: #f3f5f2;
+  --color-line: #dce1dc;
+  --color-flame: #d62718;
+  --color-flame-dark: #b41d11;
+  --color-ember: #f2701f;
+  --color-sun: #fdb913;
+  --color-text: #12212e;
+  --color-muted: #55626e;
+
+  --font-sans: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+  --header-h: 76px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 16px);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-.is-style-underlined-heading {
-  position: relative;
-  margin-bottom: 0.75em !important;
-  padding-bottom: 0.75em;
+::selection {
+  background: var(--color-sun);
+  color: var(--color-ink-deep);
 }
-.is-style-underlined-heading::before {
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  width: 2.5em;
-  height: 3px;
-  content: "";
-  background-color: lab(72.7183% 31.8672 97.9407);
+
+/* Headline voice: Archivo pushed wide and heavy, set tight */
+.display {
+  font-variation-settings: "wdth" 118;
+  font-weight: 760;
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.heading {
+  font-variation-settings: "wdth" 112;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.prose-measure {
+  max-width: 66ch;
+}
+
+.container-x {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+@media (min-width: 768px) {
+  .container-x {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* The energy line: the flame gradient, used only for the value-chain diagram and small accents */
+.energy-gradient {
+  background: linear-gradient(90deg, var(--color-flame), var(--color-ember) 55%, var(--color-sun));
+}
+
+/* Focus that is visible on both dark and light grounds */
+:focus-visible {
+  outline: 2px solid var(--color-sun);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Hero load sequence — the one orchestrated moment on each page */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.rise {
+  opacity: 0;
+  animation: rise 0.9s var(--ease-out-soft) forwards;
+}
+.rise-1 { animation-delay: 0.05s; }
+.rise-2 { animation-delay: 0.18s; }
+.rise-3 { animation-delay: 0.32s; }
+.rise-4 { animation-delay: 0.46s; }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .rise {
+    opacity: 1;
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
 }

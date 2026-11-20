@@ -1,27 +1,26 @@
 "use client";
 
-import { CheckIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 
+/** The full supply catalogue as a two-column list. */
 export default function GMCSpecializedEquipment() {
-  const t = useTranslations("Fournisseurs.Section");
-
-  const items = t.raw("items") as string[];
+  const t = useTranslations("Fournisseurs");
+  const items = t.raw("Section.items") as string[];
 
   return (
-    <section className="max-w-7xl mx-auto w-full py-16 px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-col gap-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#a02c0f]">
-          {t("title")}
+    <section className="bg-paper py-20 md:py-28">
+      <div className="container-x grid gap-8 lg:grid-cols-12 lg:gap-16">
+        <h2 className="heading border-t-2 border-ink pt-5 text-[28px] text-ink lg:col-span-4">
+          {t("catalogue_title")}
         </h2>
-
-        <p className="text-lg leading-10 text-gray-700">{t("description")}</p>
-
-        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-800 text-lg">
-          {items.map((item, index) => (
-            <li key={index} className="flex items-start gap-3 text-gray-700">
-              <CheckIcon size={24} className="text-amber-500 min-w-10" />
-              <span>{item}</span>
+        <ul className="grid gap-x-12 sm:grid-cols-2 lg:col-span-8">
+          {items.map((item) => (
+            <li
+              key={item}
+              className="flex gap-4 border-b border-line py-4 text-[17px] leading-relaxed text-text/85"
+            >
+              <span className="mt-[0.7em] h-[2px] w-3 shrink-0 bg-flame" aria-hidden />
+              {item}
             </li>
           ))}
         </ul>

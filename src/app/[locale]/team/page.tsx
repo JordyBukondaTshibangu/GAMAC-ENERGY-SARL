@@ -2,8 +2,9 @@
 
 import { useTranslations } from "next-intl";
 
+import { ButtonLink } from "@/components/atoms/button";
 import GMCGetInTouch from "@/components/common/gmc-get-in-touch";
-import Hero from "@/components/common/gmc-hero";
+import PageHero from "@/components/common/page-hero";
 import GMCTeamDescription from "@/components/molecules/team/gmc-team-description";
 import GMCTeamList from "@/components/molecules/team/gmc-team-list";
 
@@ -11,21 +12,26 @@ function TeamPage() {
   const t = useTranslations("Team");
 
   return (
-    <div className="flex flex-col gap-20">
-      <Hero
+    <>
+      <PageHero
+        media={{
+          type: "video",
+          sources: ["/assets/videos/team.mp4"],
+          poster: "/assets/images/manual-services.jpg",
+        }}
+        kicker={t("hero.title_description_1")}
         title={t("hero.title")}
-        videos={["/assets/videos/team.mp4"]}
-        subtitle={t("hero.title_description_1")}
         description={t("hero.description")}
-        buttonText={t("hero.button")}
-        buttonLink="/about"
-        overlayOpacity={0.7}
+        actions={
+          <ButtonLink href="/about" variant="outline-light">
+            {t("hero.button")}
+          </ButtonLink>
+        }
       />
-
       <GMCTeamDescription />
       <GMCTeamList />
       <GMCGetInTouch />
-    </div>
+    </>
   );
 }
 

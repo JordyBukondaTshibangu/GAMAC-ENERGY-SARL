@@ -3,100 +3,54 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-type Member = {
-  name: string;
-  role: string;
-  description: string;
-  image: string;
-  linkedin: string | null;
-  email: string | null;
-};
+type Member = { name: string; role: string };
 
-// Shape of a member as it appears in the JSON dictionary
-type RawMember = {
-  name?: string;
-  "name: "?: string; // to handle the typo in your JSON
-  role: string;
-  description: string;
-  linkedin?: string;
-  email?: string;
-};
+const images = [
+  "/assets/images/membres/dg.png",
+  "/assets/images/membres/coordonatrice.png",
+  "/assets/images/membres/coordonateur.png",
+  "/assets/images/membres/ingenieur.png",
+  "/assets/images/membres/analiste.png",
+  "/assets/images/membres/manager.jpg",
+];
 
 function GMCTeamList() {
   const t = useTranslations("Team");
-
-  const rawMembers = t.raw("members") as RawMember[];
-
-  const images = [
-    "/assets/images/membres/dg.png",
-    "/assets/images/membres/coordonatrice.png",
-    "/assets/images/membres/coordonateur.png",
-    "/assets/images/membres/ingenieur.png",
-    "/assets/images/membres/analiste.png",
-    "/assets/images/membres/manager.jpg",
-  ];
-
-  const members: Member[] = rawMembers.map(
-    (member: RawMember, index: number) => ({
-      name: member.name ?? member["name: "] ?? "",
-      role: member.role,
-      description: member.description,
-      image: images[index] ?? images[images.length - 1],
-      linkedin: member.linkedin ?? null,
-      email: member.email ?? null,
-    })
-  );
+  const members = t.raw("members") as Member[];
 
   return (
-    <section className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
-      <div className="w-full grid grid-cols-1 gap-20">
-        {members.map((member, index) => (
-          <div
-            key={index}
-            className="w-full flex flex-col md:flex-row justify-between gap-20"
+    <section className="py-16 md:py-24">
+      <div className="container-x">
+        <ul className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+          {members.map((m, i) => (
+            <li key={m.name}>
+              <div className="relative aspect-[4/5] overflow-hidden bg-paper">
+                <Image
+                  src={images[i] ?? images[images.length - 1]}
+                  alt={m.name}
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover object-top"
+                />
+              </div>
+              <h3 className="heading mt-5 text-[22px] text-ink">{m.name}</h3>
+              <p className="mt-1 text-[15px] text-muted">{m.role}</p>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-20 grid gap-6 border-t-2 border-ink pt-8 md:grid-cols-12 md:items-baseline">
+          <h2 className="heading text-[26px] text-ink md:col-span-4">{t("team.join_title")}</h2>
+          <p className="text-[17px] leading-relaxed text-muted md:col-span-5">
+            {t("team.join_text")}
+          </p>
+          <a
+            href={`mailto:${t("team.join_email")}`}
+            className="text-[17px] font-semibold text-ink underline decoration-flame decoration-2 underline-offset-[6px] hover:text-flame md:col-span-3 md:justify-self-end"
           >
-            {/* Profile section */}
-            <div className="w-full self-start flex flex-col items-center">
-              <Image
-                src={member.image}
-                alt={member.name}
-                width={800}
-                height={600}
-                className="w-40 h-40 rounded-full mb-4 object-cover"
-              />
-
-              <h3 className="text-lg font-bold">{member.name}</h3>
-              <p className="text-sm text-gray-600">{member.role}</p>
-
-              {/* Optional links */}
-              {member.linkedin && (
-                <a
-                  href={member.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 underline text-sm mt-1"
-                >
-                  LinkedIn
-                </a>
-              )}
-              {member.email && (
-                <a
-                  href={member.email}
-                  className="text-blue-600 underline text-sm"
-                >
-                  Email
-                </a>
-              )}
-            </div>
-
-            {/* Description */}
-            <div>
-              <p className="text-lg leading-10 font-normal text-center md:text-left">
-                {member.description}
-              </p>
-            </div>
-          </div>
-        ))}
+            {t("team.join_email")}
+          </a>
+        </div>
       </div>
     </section>
   );
