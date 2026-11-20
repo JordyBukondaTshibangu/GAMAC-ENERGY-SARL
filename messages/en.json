@@ -946,5 +946,48 @@
     "subtitle": "Projects",
     "description": "We support our clients and partners in delivering their energy projects in electricity, hydraulics and downstream oil.",
     "button": "Request a consultation"
+  },
+  "Metadata": {
+    "site_name": "GAMAC Energy SARL",
+    "home": {
+      "title": "GAMAC Energy SARL | Energy & solar engineering in the DRC",
+      "description": "Design office, EPC contractor and equipment supplier in Kinshasa: solar power plants, HV/MV/LV networks, water and downstream oil projects in the DRC."
+    },
+    "about": {
+      "title": "About GAMAC Energy",
+      "description": "Founded in 2023 in Kinshasa, GAMAC Energy SARL designs, builds and upgrades electrical and hydraulic infrastructure in the DRC and across Africa."
+    },
+    "mission": {
+      "title": "Our mission",
+      "description": "Reliable and accessible energy, innovation for sustainable development and local talent: the three missions that guide GAMAC Energy."
+    },
+    "services": {
+      "title": "Engineering, EPC and equipment services",
+      "description": "Studies and engineering, physical works and electrical equipment supply for power, water and downstream oil projects in the DRC."
+    },
+    "intellectual": {
+      "title": "Feasibility studies and energy engineering",
+      "description": "Pre-feasibility and feasibility studies, grid connection studies, power plant and HV/MV/LV network design, site supervision and control in the DRC."
+    },
+    "physical": {
+      "title": "Electrical construction and maintenance",
+      "description": "Construction, maintenance, extension, compliance upgrades and renovation of solar plants, HV/MV/LV lines, substations, boreholes and oil depots."
+    },
+    "equipment": {
+      "title": "Electrical and solar equipment supply",
+      "description": "Solar panels and batteries, transformers, inverters, switchgear, turbines and pumps: equipment meeting international standards, delivered in the DRC."
+    },
+    "team": {
+      "title": "Our team",
+      "description": "Engineers, coordinators and managers: meet the GAMAC Energy SARL team in Kinshasa and find out how to join us."
+    },
+    "contact": {
+      "title": "Contact and consultation requests",
+      "description": "An energy project in the DRC? Contact GAMAC Energy in Gombe, Kinshasa, by phone, email or through our request form."
+    },
+    "projects": {
+      "title": "Our projects",
+      "description": "Energy projects supported by GAMAC Energy in power, water and downstream oil."
+    }
   }
 }

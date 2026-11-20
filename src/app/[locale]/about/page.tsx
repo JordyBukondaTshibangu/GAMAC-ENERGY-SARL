@@ -27,7 +27,7 @@ function AboutUsPage() {
         media={{
           type: "video",
           sources: ["/assets/videos/about.mp4"],
-          poster: "/assets/images/mission-3.jpg",
+          poster: "/assets/images/posters/mission-3.jpg",
         }}
         kicker={t("hero.title_description_1")}
         title={t("hero.title")}

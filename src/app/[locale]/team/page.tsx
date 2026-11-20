@@ -17,7 +17,7 @@ function TeamPage() {
         media={{
           type: "video",
           sources: ["/assets/videos/team.mp4"],
-          poster: "/assets/images/manual-services.jpg",
+          poster: "/assets/images/posters/manual-services.jpg",
         }}
         kicker={t("hero.title_description_1")}
         title={t("hero.title")}

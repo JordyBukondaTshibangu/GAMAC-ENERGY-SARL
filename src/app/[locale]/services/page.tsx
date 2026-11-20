@@ -35,7 +35,7 @@ export default function GMCServicesPage() {
         media={{
           type: "video",
           sources: ["/assets/videos/service.mp4"],
-          poster: "/assets/images/solar-equipment.jpg",
+          poster: "/assets/images/posters/solar-equipment.jpg",
         }}
         kicker={t("hero.title_description_1")}
         title={t("hero.title")}

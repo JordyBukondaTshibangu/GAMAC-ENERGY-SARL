@@ -1,10 +1,13 @@
 import Footer from "@/components/ui/footer";
 import Navbar from "@/components/ui/navigation-bar";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Archivo } from "next/font/google";
 
+import { OrganizationJsonLd } from "@/components/common/json-ld";
 import { routing } from "@/i18n/routing";
+import { SITE_URL, pageMetadata } from "@/utils/seo";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 
 import "./globals.css";
@@ -16,15 +19,26 @@ const archivo = Archivo({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: "GAMAC Energy SARL",
-    template: "%s | GAMAC Energy SARL",
-  },
-  description:
-    "Ingénierie et solutions énergétiques en RDC : études, construction EPC et fourniture d’équipements pour l’électricité, l’hydraulique et l’aval pétrolier.",
-  icons: { icon: "/logo-mark.png" },
+export const viewport: Viewport = {
+  themeColor: "#061626",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const home = await pageMetadata(params, "home");
+  return {
+    ...home,
+    metadataBase: new URL(SITE_URL),
+    applicationName: "GAMAC Energy SARL",
+    authors: [{ name: "GAMAC Energy SARL", url: SITE_URL }],
+    creator: "GAMAC Energy SARL",
+    formatDetection: { telephone: false },
+    icons: { icon: "/logo-mark.png", apple: "/logo-mark.png" },
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -42,11 +56,13 @@ export default async function RootLayout({
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
+  setRequestLocale(locale);
 
   return (
     <html lang={locale} className={archivo.variable}>
       <head>
         <meta name="grammarly" content="false" />
+        <OrganizationJsonLd locale={locale} />
       </head>
       <body>
         <NextIntlClientProvider>

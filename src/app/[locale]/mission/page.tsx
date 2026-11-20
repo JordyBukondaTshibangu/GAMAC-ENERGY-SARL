@@ -16,7 +16,7 @@ function MissionPage() {
         media={{
           type: "video",
           sources: ["/assets/videos/mission.mp4"],
-          poster: "/assets/images/mission-1.jpg",
+          poster: "/assets/images/posters/mission-1.jpg",
         }}
         kicker={t("hero.title_description_1")}
         title={t("hero.title")}

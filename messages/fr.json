@@ -947,5 +947,48 @@
     "subtitle": "Projets",
     "description": "Nous accompagnons nos clients et partenaires dans la réussite de leurs projets énergétiques en électricité, hydraulique et aval pétrolier.",
     "button": "Demander une consultation"
+  },
+  "Metadata": {
+    "site_name": "GAMAC Energy SARL",
+    "home": {
+      "title": "GAMAC Energy SARL | Ingénierie énergétique et solaire en RDC",
+      "description": "Bureau d’études, entreprise EPC et fournisseur d’équipements à Kinshasa : centrales solaires, réseaux HT/MT/BT, hydraulique et aval pétrolier en RDC."
+    },
+    "about": {
+      "title": "À propos de GAMAC Energy",
+      "description": "Fondée en 2023 à Kinshasa, GAMAC Energy SARL conçoit, construit et modernise des infrastructures électriques et hydrauliques en RDC et en Afrique."
+    },
+    "mission": {
+      "title": "Notre mission",
+      "description": "Fournir une énergie fiable et accessible, innover pour un développement durable et valoriser les talents locaux : les trois missions de GAMAC Energy."
+    },
+    "services": {
+      "title": "Services d’ingénierie, EPC et équipements",
+      "description": "Études et ingénierie, travaux physiques et fourniture d’équipements électriques pour vos projets en électricité, hydraulique et aval pétrolier en RDC."
+    },
+    "intellectual": {
+      "title": "Études de faisabilité et ingénierie énergétique",
+      "description": "Préfaisabilité, faisabilité, études de raccordement, conception de centrales et réseaux HT/MT/BT, supervision et contrôle de chantiers en RDC."
+    },
+    "physical": {
+      "title": "Construction et maintenance électrique",
+      "description": "Construction, maintenance, extension, mise aux normes et rénovation de centrales solaires, lignes HT/MT/BT, postes, forages et dépôts pétroliers."
+    },
+    "equipment": {
+      "title": "Fourniture d’équipements électriques et solaires",
+      "description": "Panneaux et batteries solaires, transformateurs, onduleurs, appareillage, turbines et pompes : des équipements aux normes internationales livrés en RDC."
+    },
+    "team": {
+      "title": "Notre équipe",
+      "description": "Ingénieurs, coordinateurs et managers : découvrez l’équipe de GAMAC Energy SARL à Kinshasa et rejoignez l’aventure."
+    },
+    "contact": {
+      "title": "Contact et demande de consultation",
+      "description": "Un projet énergétique en RDC ? Contactez GAMAC Energy à Gombe, Kinshasa, par téléphone, e-mail ou via le formulaire de demande."
+    },
+    "projects": {
+      "title": "Nos projets",
+      "description": "Les projets énergétiques accompagnés par GAMAC Energy en électricité, hydraulique et aval pétrolier."
+    }
   }
 }

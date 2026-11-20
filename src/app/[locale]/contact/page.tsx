@@ -14,7 +14,7 @@ function ContactPage() {
         media={{
           type: "video",
           sources: ["/assets/videos/contact.mp4"],
-          poster: "/assets/images/mission-3.jpg",
+          poster: "/assets/images/posters/mission-3.jpg",
         }}
         kicker={t("hero.subtitle")}
         title={t("hero.title")}

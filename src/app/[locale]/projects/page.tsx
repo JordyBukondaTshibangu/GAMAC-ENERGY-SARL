@@ -15,7 +15,7 @@ function ProjectsPage() {
         media={{
           type: "video",
           sources: ["/assets/videos/projets.mp4"],
-          poster: "/assets/images/solar-equipment.jpg",
+          poster: "/assets/images/posters/solar-equipment.jpg",
         }}
         title={t("title")}
         description={t("description")}

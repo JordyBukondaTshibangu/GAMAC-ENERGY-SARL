@@ -28,7 +28,7 @@ export default function Home() {
         media={{
           type: "video",
           sources: ["/assets/videos/hero-2.mp4", "/assets/videos/hero-1.mp4"],
-          poster: "/assets/images/mission-2.jpg",
+          poster: "/assets/images/posters/mission-2.jpg",
         }}
         kicker={`${common("company")}, Kinshasa`}
         title={t("hero.title")}
